@@ -37,7 +37,6 @@ int main()
     //CPU
     auto start = high_resolution_clock::now();
     answerCPU = CPUimplementation(A, B, N);
-    answerCPU = CPUimplementation(A, B, N);
     auto stop = high_resolution_clock::now();
 
     cout << "Answer (CPU): " << answerCPU << " time: " << duration_cast<milliseconds>(stop - start).count() << " ms" << endl;
@@ -62,7 +61,6 @@ int main()
     cudaEventCreate(&stopGPU);
 
     cudaEventRecord(startGPU);
-    GPUimplementation<<< number_of_blocks, block_size >>>(cudaA, cudaB, answerGPU);
     GPUimplementation<<< number_of_blocks, block_size >>>(cudaA, cudaB, answerGPU);
     cudaDeviceSynchronize();
 
