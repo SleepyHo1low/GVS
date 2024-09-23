@@ -28,7 +28,7 @@ int main()
     float *A = new float[N];
     float *B = new float[N];
 
-    float answerCPU, * answerGPU = 0;
+    float answerCPU, answerGPU = 0, *answerGGPU = -1;
 
     fillArrays(A, B, N);
 
@@ -44,10 +44,9 @@ int main()
     float* cudaA;
     float* cudaB;
 
-    //Âûäåëÿåì ïàìÿòü íà âèäþõå
     cudaMalloc(&cudaA, floatS);
     cudaMalloc(&cudaB, floatS);
-    //cudaMalloc(&answerGPU, sizeof(float));
+    cudaMalloc(&answerGPU, sizeof(float));
 
     //Êîïèðóåì ìàññèâû íà âèäþõó
     cudaMemcpy(cudaA, A, floatS, cudaMemcpyHostToDevice);
@@ -67,14 +66,16 @@ int main()
 
     cudaEventRecord(stopGPU);
 
+    cudaMemcpy(answerGGPU, answerGPU, sizeof(float), cudaMemcpyDeviceToHost);
+
     float milliseconds = 0;
     cudaEventElapsedTime(&milliseconds, startGPU, stopGPU);
 
-    cout << "Answer (GPU): " << answerGPU << " time: " << milliseconds << " ms" << endl;
+    cout << "Answer (GPU): " << answerGGPU << " time: " << milliseconds << " ms" << endl;
 
     cudaFree(cudaA);
     cudaFree(cudaB);
-    //cudaFree(answerGPU);
+    cudaFree(answerGPU);
 
     delete[] A;
     delete[] B;
