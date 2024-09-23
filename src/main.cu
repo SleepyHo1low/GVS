@@ -28,7 +28,7 @@ int main()
     float *A = new float[N];
     float *B = new float[N];
 
-    float answerCPU, *answerGPU = 0, *answerGGPU = 0;
+    float answerCPU, answerGPU = 0, answerGGPU = -1;
 
     fillArrays(A, B, N);
 
