@@ -44,9 +44,9 @@ int main()
     float* cudaA;
     float* cudaB;
 
-    cudaMalloc(&cudaA, floatS);
-    cudaMalloc(&cudaB, floatS);
-    cudaMalloc(&answerGPU, sizeof(float));
+    cudaMalloc(*cudaA, floatS);
+    cudaMalloc(*cudaB, floatS);
+    cudaMalloc(*answerGPU, sizeof(float));
 
     //Êîïèðóåì ìàññèâû íà âèäþõó
     cudaMemcpy(cudaA, A, floatS, cudaMemcpyHostToDevice);
