@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.24...3.30)
 
 project(GVS_pr1 VERSION 1.0 LANGUAGES CXX CUDA)
 
-find_package(CUDA REQUIRED)
-
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(CMAKE_CXX_STANDARD 23)
