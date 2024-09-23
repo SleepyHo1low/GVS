@@ -16,6 +16,6 @@ add_library(imp STATIC
 target_compile_features(imp PRIVATE cuda_std_17)
 set_target_properties(imp PROPERTIES CUDA_ARCHITECTURE "75")
 
-add_executable(gvs src/main.cu)
+add_executable(gvs src/main.cu src/main.cu)
 
 install(TARGETS imp gvs DESTINATION lib/GVS bin/GVS)
