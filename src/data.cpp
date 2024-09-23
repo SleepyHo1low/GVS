@@ -27,7 +27,7 @@ public:
 	//деструктор
 	~Data() {
 		delete[] dataA, dataB;
-		cout << "\nУдалены массивы dataA и dataB\n";
+		cout << "\nDelete dataA & dataB\n";
 	}
 
 	void make_arrays() {
@@ -38,14 +38,14 @@ public:
 		ifstream in;
 		in.open(path);
 		if (!in.is_open()) {
-			cout << "\nФайл не открыт";
+			cout << "\nFile not open";
 			return;
 		}
-		cout << "\nФайл открыт для чтения данных";
+		cout << "\nFile open for read";
 		in >> n;
-		cout << "\nкол - во элементов массивов: " << n << endl;
+		cout << "\nnum of elements in array: " << n << endl;
 		if (n == 0) {
-			cout << "\nПерезаписываю файл...";
+			cout << "\nrewrite file...";
 			in.close();
 			writeFile(path);
 		}
@@ -56,7 +56,7 @@ public:
 				in >> dataB[i];
 			}
 			in.close();
-			cout << "\nФайл считан";
+			cout << "\nfile read is complete";
 		}
 		return;
 	}
@@ -75,10 +75,10 @@ public:
 		ofstream out;
 		out.open(path);
 		if (!out.is_open()) {
-			cout << "\nФайл не открыт";
+			cout << "\nFile not open";
 			return;
 		}
-		cout << "\nФайл открыт для записи данных\nВведите N: ";
+		cout << "\nFile open for write data\ninsert N: ";
 		cin >> n;
 		make_arrays();
 		fillArrays();
@@ -92,7 +92,7 @@ public:
 			out << "\n";
 		}
 
-		cout << "\nФайл записан";
+		cout << "\nFile wrote is complete";
 		out.close();
 		return;
 	}
