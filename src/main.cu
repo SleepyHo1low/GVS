@@ -21,7 +21,7 @@ int main()
 {
     srand(time(0));
 
-    const long int N = 500000000000;
+    const long int N = 50000000000;
     const long int floatS = N*sizeof(float);
 
     float *A = new float[N];
