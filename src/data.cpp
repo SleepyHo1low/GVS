@@ -10,7 +10,7 @@ public:
 	int n;
 	float* dataA;
 	float* dataB;
-	//конструктор
+	//конструктор/
 	Data(string path) {
 		ifstream in;
 		in.open(path);
@@ -97,10 +97,3 @@ public:
 		return;
 	}
 };
-
-int main() {
-	setlocale(LC_ALL, "ru");
-	Data data{ "test.txt" };
-	cout << endl;
-	return 0;
-}

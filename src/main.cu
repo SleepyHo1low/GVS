@@ -4,28 +4,21 @@
 #include <ctime>
 #include <curand.h>
 #include "imp.cuh"
-
+#include "data.cpp"
 using namespace std;
 using namespace std::chrono;
 
-void fillArrays(float* a, float* b, int N)
-{
-    for (int i = 0; i < N; ++i)
-    {
-        a[i] = (float)(rand()) / (float)(RAND_MAX);
-        b[i] = (float)(rand()) / (float)(RAND_MAX);
-    }
-}
 
 int main()
 {
     srand(time(0));
 
-    const int N = 500000000;
+    Data data("data.txt");
+    const int N = data.n;
     const int floatS = N*sizeof(float);
 
-    float *A = new float[N];
-    float *B = new float[N];
+    float *A = data.dataA;
+    float *B = data.dataB;
 
     float answerCPU, *answerGPU = new float(), *answerGGPU = new float();
 
