@@ -30,6 +30,9 @@ int main()
 
     float answerCPU, *answerGPU = new float(), *answerGGPU = new float();
 
+    answerGPU = 0;
+    answerGGPU = 0;
+
     fillArrays(A, B, N);
 
     //CPU
