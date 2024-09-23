@@ -21,8 +21,8 @@ int main()
 {
     srand(time(0));
 
-    //Размер векторов
-    const int N = 1000;
+    //ГђГ Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г®Гў
+    const int N = 100000000;
     const int floatS = N*sizeof(float);
 
     float *A = new float[N];
@@ -44,12 +44,12 @@ int main()
     float* cudaA;
     float* cudaB;
 
-    //Выделяем память на видюхе
+    //Г‚Г»Г¤ГҐГ«ГїГҐГ¬ ГЇГ Г¬ГїГІГј Г­Г  ГўГЁГ¤ГѕГµГҐ
     cudaMalloc(&cudaA, floatS);
     cudaMalloc(&cudaB, floatS);
     //cudaMalloc(&answerGPU, sizeof(float));
 
-    //Копируем массивы на видюху
+    //ГЉГ®ГЇГЁГ°ГіГҐГ¬ Г¬Г Г±Г±ГЁГўГ» Г­Г  ГўГЁГ¤ГѕГµГі
     cudaMemcpy(cudaA, A, floatS, cudaMemcpyHostToDevice);
     cudaMemcpy(cudaB, B, floatS, cudaMemcpyHostToDevice);
 
