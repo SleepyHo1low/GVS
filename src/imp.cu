@@ -2,7 +2,7 @@
 
 __global__ void GPUimplementation(float* a, float* b, float* result)
 {
-    int i = threadIdx.x + blockDim.x + blockIdx.x;
+    int i = threadIdx.x + blockDim.x * blockIdx.x;
     atomicAdd(result, a[i] * b[i]);
 }
 
