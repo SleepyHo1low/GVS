@@ -26,8 +26,6 @@ int main()
     *answerGPU = 0;
     *answerGGPU = 0;
 
-    fillArrays(A, B, N);
-
     //CPU
     auto start = high_resolution_clock::now();
     answerCPU = CPUimplementation(A, B, N);
