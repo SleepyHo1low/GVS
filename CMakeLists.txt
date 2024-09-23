@@ -18,9 +18,4 @@ set_target_properties(imp PROPERTIES CUDA_ARCHITECTURE "75")
 
 add_executable(gvs src/main.cu)
 
-target_link_libraries(GVS_pr1 PUBLIC
-    src/imp.cu
-    src/imp.cuh
-)
-
 install(TARGETS imp gvs DESTINATION lib/GVS bin/GVS)
