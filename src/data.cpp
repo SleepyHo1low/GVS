@@ -56,7 +56,7 @@ public:
 				in >> dataB[i];
 			}
 			in.close();
-			cout << "\nfile read is complete";
+			cout << "\nfile read is complete\n";
 		}
 		return;
 	}
@@ -92,7 +92,7 @@ public:
 			out << "\n";
 		}
 
-		cout << "\nFile wrote is complete";
+		cout << "\nFile wrote is complete\n";
 		out.close();
 		return;
 	}
