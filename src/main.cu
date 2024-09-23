@@ -21,8 +21,7 @@ int main()
 {
     srand(time(0));
 
-    //Ðàçìåð âåêòîðîâ
-    const int N = 100000;
+    const int N = 1000000000;
     const long int floatS = N*sizeof(float);
 
     float *A = new float[N];
@@ -51,7 +50,6 @@ int main()
     cudaMalloc(&cudaB, floatS);
     cudaMalloc(&answerGPU, sizeof(float));
 
-    //Êîïèðóåì ìàññèâû íà âèäþõó
     cudaMemcpy(cudaA, A, floatS, cudaMemcpyHostToDevice);
     cudaMemcpy(cudaB, B, floatS, cudaMemcpyHostToDevice);
 
