@@ -21,7 +21,7 @@ int main()
 {
     srand(time(0));
 
-    const int N = 500000;
+    const int N = 500000000;
     const long int floatS = N*sizeof(float);
 
     float *A = new float[N];
@@ -53,7 +53,7 @@ int main()
     cudaMemcpy(cudaA, A, floatS, cudaMemcpyHostToDevice);
     cudaMemcpy(cudaB, B, floatS, cudaMemcpyHostToDevice);
 
-    const int block_size = 256;
+    const int block_size = 512;
     int number_of_blocks = N/block_size + 1;
 
     cudaEvent_t startGPU, stopGPU;
