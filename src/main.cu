@@ -22,7 +22,7 @@ int main()
     srand(time(0));
 
     //Ðàçìåð âåêòîðîâ
-    const int N = INT_MAX;
+    const int N = 100000;
     const long int floatS = N*sizeof(float);
 
     float *A = new float[N];
