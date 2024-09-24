@@ -36,6 +36,11 @@ public:
 		dataB = new float[n];
 	}
 
+	void allocateData() {
+		dataA = new float[n];
+		dataB = new float[n];
+	}
+
 	bool isFileEmpty(const std::string& filename) {
 		std::ifstream file(filename, std::ios::binary);
 		char ch;
