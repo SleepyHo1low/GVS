@@ -52,8 +52,7 @@ public:
 		else {
 			make_arrays();
 			for (int i = 0; i < n; i++) {
-				in >> dataA[i];
-				in >> dataB[i];
+				in >> dataA[i] >> dataB[i];
 			}
 			in.close();
 			cout << "\nfile read is complete\n";
@@ -86,10 +85,7 @@ public:
 		out << n;
 		out << "\n";
 		for (int i = 0; i < n; i++) {
-			out << dataA[i];
-			out << " ";
-			out << dataB[i];
-			out << "\n";
+			out << dataA[i] << " " << dataB[i] << "\n";
 		}
 
 		cout << "\nFile wrote is complete\n";

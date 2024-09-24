@@ -11,7 +11,6 @@ using namespace std::chrono;
 
 int main()
 {
-    setlocale(LC_ALL,"ru");
     srand(time(0));
 
     Data data("data.txt");
