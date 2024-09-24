@@ -12,15 +12,16 @@ public:
 	float* dataB;
 	//конструктор/
 	Data(string path) {
-		ifstream in;
-		in.open(path);
-		if (!in.is_open()) {
-			in.close();
-			writeFile(path);
+
+		ifstream inFile(path, std::ios::binary);
+		if (!inFile.is_open()) {
+
+			inFile.close();
+			writeArrayToBinaryFile(path);
 		}
 		else {
-			in.close();
-			readFile(path);
+			inFile.close();
+			readArrayFromBinaryFile(path);
 		}
 	}
 
@@ -34,30 +35,11 @@ public:
 		dataA = new float[n];
 		dataB = new float[n];
 	}
-	void readFile(string path) {
-		ifstream in;
-		in.open(path);
-		if (!in.is_open()) {
-			cout << "\nFile not open";
-			return;
-		}
-		cout << "\nFile open for read";
-		in >> n;
-		cout << "\nnum of elements in array: " << n << endl;
-		if (n == 0) {
-			cout << "\nrewrite file...";
-			in.close();
-			writeFile(path);
-		}
-		else {
-			make_arrays();
-			for (int i = 0; i < n; i++) {
-				in >> dataA[i] >> dataB[i];
-			}
-			in.close();
-			cout << "\nfile read is complete\n";
-		}
-		return;
+
+	bool isFileEmpty(const std::string& filename) {
+		std::ifstream file(filename, std::ios::binary);
+		char ch;
+		return file.is_open() && !file.get(ch);
 	}
 
 	void fillArrays()
@@ -70,26 +52,50 @@ public:
 		}
 	}
 
-	void writeFile(string path) {
-		ofstream out;
-		out.open(path);
-		if (!out.is_open()) {
-			cout << "\nFile not open";
+	void readArrayFromBinaryFile(string path) {
+
+		ifstream inFile(path, std::ios::binary);
+
+		if (isFileEmpty(path)) {
+			cout << "\nFile is empty. Generating data...\n";
+			inFile.close();
+			writeArrayToBinaryFile(path);
+			return;
+		}
+
+		// Считываем размер массива из начала файла
+		inFile.read(reinterpret_cast<char*>(&n), sizeof(int));
+
+		//выделяем память
+		allocateData();
+
+		// Считываем сам массив
+		inFile.read(reinterpret_cast<char*>(dataA), n * sizeof(float));
+		inFile.read(reinterpret_cast<char*>(dataB), n * sizeof(float));
+		inFile.close();
+		cout << "Read file complete: " << path << endl;
+
+	}
+
+	void writeArrayToBinaryFile(string path) {
+		ofstream outFile(path, std::ios::binary);
+
+		if (!outFile.is_open()) {
+			cout << "\nFile not open: " << path << endl;
 			return;
 		}
 		cout << "\nFile open for write data\ninsert N: ";
 		cin >> n;
-		make_arrays();
-		fillArrays();
+		allocateData();
+		generateData();
+		// Записываем размер массива в начале файла
+		outFile.write(reinterpret_cast<const char*>(&n), sizeof(int));
 
-		out << n;
-		out << "\n";
-		for (int i = 0; i < n; i++) {
-			out << dataA[i] << " " << dataB[i] << "\n";
-		}
+		// Записываем сам массив
+		outFile.write(reinterpret_cast<char*>(dataA), n * sizeof(float));
+		outFile.write(reinterpret_cast<char*>(dataB), n * sizeof(float));
 
-		cout << "\nFile wrote is complete\n";
-		out.close();
-		return;
+		outFile.close();
+		cout << "Write data complete: " << path << endl;
 	}
 };
