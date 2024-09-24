@@ -30,7 +30,7 @@ public:
     ~Data() {
         delete[] dataA;
         delete[] dataB;
-        cout << "\nDelete dataA & dataB\n";
+        //cout << "\nDelete dataA & dataB\n";
     }
 
     // Allocate memory for data arrays 
