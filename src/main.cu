@@ -13,7 +13,7 @@ int main()
 {
     srand(time(0));
 
-    Data data("data.txt");
+    Data data("/content/Data/data.txt");
     const int N = data.n;
     const int floatS = N*sizeof(float);
 
