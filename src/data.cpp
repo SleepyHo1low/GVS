@@ -47,7 +47,7 @@ public:
 		return file.is_open() && !file.get(ch);
 	}
 
-	void fillArrays()
+	void generateData()
 	{
 		srand(time(NULL));
 		for (int i = 0; i < n; ++i)
