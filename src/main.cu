@@ -68,8 +68,7 @@ int main()
     cudaFree(cudaB);
     cudaFree(answerGPU);
 
-    delete[] A;
-    delete[] B;
+
 
     return(0);
 }
