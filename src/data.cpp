@@ -11,7 +11,7 @@ public:
     float* dataA;
     float* dataB;
 
-    // Constructor (improved for efficiency)
+    // Constructor 
     Data(string path) {
 
         ifstream inFile(path, std::ios::binary);
@@ -26,20 +26,20 @@ public:
         }
     }
 
-    // Destructor (unchanged)
+    // Destructor 
     ~Data() {
         delete[] dataA;
         delete[] dataB;
         cout << "\nDelete dataA & dataB\n";
     }
 
-    // Allocate memory for data arrays (unchanged)
+    // Allocate memory for data arrays 
     void allocateData() {
         dataA = new float[n];
         dataB = new float[n];
     }
 
-    // Generate random data for arrays (unchanged)
+    // Generate random data for arrays 
     void generateData() {
         srand(time(NULL));
         for (int i = 0; i < n; ++i) {
