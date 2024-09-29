@@ -49,7 +49,7 @@ void tests(int N){
 
 int main(){
   srand(time(0));
-  for(int N = 10000, int i = 1; N < 250000000; N += 50000, i++){
+  for(int N = 10000, i = 1; N < 250000000; N += 50000, i++){
     cout << "Test " << i << ":" << endl;
     tests(N);
   }
