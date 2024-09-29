@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CUDA_STANDARD 17)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -O3")
 
-
+# Добавление GoogleTest с использованием FetchContent
 include(FetchContent)
 
 FetchContent_Declare(
@@ -34,12 +34,15 @@ add_executable(gvs src/imp.cu src/main.cu)
 
 target_include_directories(gvs PUBLIC src)
 
-# Создание тестового исполняемого файла
+# Создание тестового исполняемого файла для GoogleTest
 add_executable(gvs_tests test/test.cu)  # Замените на путь к вашему тестовому файлу
 
-# Линкование с GoogleTest и вашей библиотекой imp
-target_link_libraries(gvs_tests PRIVATE GTest::gtest GTest::gtest_main imp)
+# Линковка с GoogleTest и вашей библиотекой imp
+target_link_libraries(gvs_tests PRIVATE 
+    imp 
+    GTest::gtest 
+    GTest::gtest_main
+)
 
-include(GoogleTest)
-enable_testing()
-gtest_discover_tests(gvs_tests)
+enable_testing() # Включаем тестирование
+gtest_discover_tests(gvs_tests) # Автоматическое обнаружение тестов
