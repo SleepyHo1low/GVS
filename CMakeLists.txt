@@ -41,8 +41,11 @@ add_executable(gvs_tests test/test.cu)  # Замените на путь к ва
 target_link_libraries(gvs_tests PRIVATE 
     imp 
     GTest::gtest 
-    GTest::gtest_main
+    GTest::gtest_main 
 )
 
 enable_testing() # Включаем тестирование
-gtest_discover_tests(gvs_tests) # Автоматическое обнаружение тестов
+
+# Регистрация тестов с помощью gtest_discover_tests
+include(GoogleTest)
+gtest_discover_tests(gvs_tests)
