@@ -38,7 +38,7 @@ target_include_directories(gvs PUBLIC src)
 enable_testing()
 
 # Создание тестового исполняемого файла
-add_executable(gvs_tests test/test.cpp)  # Замените на путь к вашему тестовому файлу
+add_executable(gvs_tests test/test.cu)  # Замените на путь к вашему тестовому файлу
 
 # Линкование с GoogleTest и вашей библиотекой imp
 target_link_libraries(gvs_tests PRIVATE GTest::gtest GTest::gtest_main imp)
