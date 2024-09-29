@@ -51,6 +51,6 @@ int main(){
   srand(time(0));
   for(int i = 1; i < 100; i++){
     cout << "Test " << i << ":" << endl;
-    tests(10000 + 25000 * i);
+    tests(1000000 + 25000 * i);
   }
 }
