@@ -1,57 +1,74 @@
-#include <imp.cuh>
+#include <stdio.h>
 #include <iostream>
+#include <chrono>
 #include <ctime>
-#include <gtest/gtest.h>
-
+#include <curand.h>
+#include "imp.cuh"
+#include "data.cpp"
 using namespace std;
+using namespace std::chrono;
 
-void tests(int N){
-  float *A = new float[N];
-  float *B = new float[N];
 
-  for (int i = 0; i < N; ++i) {
-      A[i] = static_cast<float>(rand()) / RAND_MAX;
-      B[i] = static_cast<float>(rand()) / RAND_MAX;
-  }
-  
-  float answerCPU = CPUimplementation(A, B, N); // Вычисления на CPU
+int main()
+{
+    srand(time(0));
 
-  float *cudaA, *cudaB, *answerGPU; // Вычисления на GPU
-  cudaMalloc(&cudaA, N * sizeof(float));
-  cudaMalloc(&cudaB, N * sizeof(float));
-  cudaMalloc(&answerGPU, sizeof(float));
+    Data data("/content/Data/data.bin");
+    const int N = data.n;
+    const int floatS = N*sizeof(float);
 
-  cudaMemcpy(cudaA, A, N * sizeof(float), cudaMemcpyHostToDevice);
-  cudaMemcpy(cudaB, B, N * sizeof(float), cudaMemcpyHostToDevice);
+    float *A = data.dataA;
+    float *B = data.dataB;
 
-  const int block_size = 256;
-  int number_of_blocks = (N + block_size - 1) / block_size;
+    float answerCPU, *answerGPU = new float(), *answerGGPU = new float();
 
-  GPUimplementation<<<number_of_blocks, block_size>>>(cudaA, cudaB, answerGPU);
-  cudaDeviceSynchronize();
-  float answerGGPU;
-  cudaMemcpy(&answerGGPU, answerGPU, sizeof(float), cudaMemcpyDeviceToHost);
+    *answerGPU = 0;
+    *answerGGPU = 0;
 
-  // Сравнение результатов
-  ASSERT_NEAR(answerCPU, answerGGPU, 1e-5) << "CPU: " << answerCPU << " GPU: " << answerGGPU;
+    //CPU
+    auto start = high_resolution_clock::now();
+    answerCPU = CPUimplementation(A, B, N);
+    auto stop = high_resolution_clock::now();
 
-  // Освобождение ресурсов
-  delete[] A;
-  delete[] B;
-  cudaFree(cudaA);
-  cudaFree(cudaB);
-  cudaFree(answerGPU);
-}
+    cout << "Answer (CPU): " << answerCPU << " time: " << duration_cast<milliseconds>(stop - start).count() << " ms" << endl;
+    
+    //GPU
 
-TEST(CpuGpuTests, CompareResults) {
-    for (int i = 1; i <= 50; ++i) { // Запускаем 50 тестов с увеличением размера массива
-        int N = 10000 + i * 50000; 
-        tests(N); // Запуск теста
-    }
-}
+    float* cudaA;
+    float* cudaB;
 
-int main(int argc, char **argv){
-  srand(time(0));
-  ::testing::InitGoogleTest(&argc, argv); 
-  return RUN_ALL_TESTS();
+    cudaMalloc(&cudaA, floatS);
+    cudaMalloc(&cudaB, floatS);
+    cudaMalloc(&answerGPU, sizeof(float));
+
+    cudaMemcpy(cudaA, A, floatS, cudaMemcpyHostToDevice);
+    cudaMemcpy(cudaB, B, floatS, cudaMemcpyHostToDevice);
+
+    const int block_size = 256;
+    int number_of_blocks = N/block_size + 1;
+
+    cudaEvent_t startGPU, stopGPU;
+    cudaEventCreate(&startGPU);
+    cudaEventCreate(&stopGPU);
+
+    cudaEventRecord(startGPU);
+    GPUimplementation<<< number_of_blocks, block_size >>>(cudaA, cudaB, answerGPU);
+    cudaDeviceSynchronize();
+
+    cudaEventRecord(stopGPU);
+
+    cudaMemcpy(answerGGPU, answerGPU, sizeof(float), cudaMemcpyDeviceToHost);
+
+    float milliseconds = 0;
+    cudaEventElapsedTime(&milliseconds, startGPU, stopGPU);
+
+    cout << "Answer (GPU): " << *answerGGPU << " time: " << milliseconds << " ms" << endl;
+
+    cudaFree(cudaA);
+    cudaFree(cudaB);
+    cudaFree(answerGPU);
+
+
+
+    return(0);
 }
