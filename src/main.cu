@@ -32,8 +32,8 @@ void tests(int N){
   cudaMemcpy(&answerGGPU, answerGPU, sizeof(float), cudaMemcpyDeviceToHost);
 
   // Сравнение результатов
-  cout << "CPU: " << answerCPU << " GPU: " << answerGPU << endl;
-  if (abs(answerCPU - answerGGPU) < 1e-5) {
+  cout << "CPU: " << answerCPU << " GPU: " << *answerGGPU << endl;
+  if (abs(answerCPU - *answerGGPU) < 1e-5) {
       cout << "Результаты совпадают!" << endl;
   } else {
       cout << "Результаты не совпадают!" << endl;
