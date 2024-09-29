@@ -1,6 +1,7 @@
 #include <imp.cuh>
 #include <iostream>
 #include <ctime>
+#include <gtest/gtest.h>
 
 using namespace std;
 
@@ -32,12 +33,7 @@ void tests(int N){
   cudaMemcpy(&answerGGPU, answerGPU, sizeof(float), cudaMemcpyDeviceToHost);
 
   // Сравнение результатов
-  cout << "CPU: " << answerCPU << " GPU: " << answerGGPU << endl;
-  if (abs(answerCPU - answerGGPU) < 1e-5) {
-      cout << "Результаты совпадают!" << endl;
-  } else {
-      cout << "Результаты не совпадают!" << endl;
-  }
+  ASSERT_NEAR(answerCPU, answerGGPU, 1e-5) << "CPU: " << answerCPU << " GPU: " << answerGGPU;
 
   // Освобождение ресурсов
   delete[] A;
@@ -47,10 +43,15 @@ void tests(int N){
   cudaFree(answerGPU);
 }
 
-int main(){
+TEST(CpuGpuTests, CompareResults) {
+    for (int i = 1; i <= 50; ++i) { // Запускаем 50 тестов с увеличением размера массива
+        int N = 10000 + i * 50000; 
+        tests(N); // Запуск теста
+    }
+}
+
+int main(int argc, char **argv){
   srand(time(0));
-  for(int N = 10000, i = 1; N < 250000000; N += 50000, i++){
-    cout << "Test " << i << ":" << endl;
-    tests(N);
-  }
+  ::testing::InitGoogleTest(&argc, argv); 
+  return RUN_ALL_TESTS();
 }
