@@ -39,10 +39,6 @@ target_include_directories(gvs_tests PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
-# Создание тестового исполняемого файла для GoogleTest
-add_executable(gvs_tests test/test.cu)  # Замените на путь к вашему тестовому файлу
-
-# Линковка с GoogleTest и вашей библиотекой imp
 target_link_libraries(gvs_tests PRIVATE 
     imp 
     GTest::gtest 
@@ -51,6 +47,5 @@ target_link_libraries(gvs_tests PRIVATE
 
 enable_testing() # Включаем тестирование
 
-# Регистрация тестов с помощью gtest_discover_tests
 include(GoogleTest)
 gtest_discover_tests(gvs_tests)
