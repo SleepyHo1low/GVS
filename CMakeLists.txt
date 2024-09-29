@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CUDA_STANDARD 17)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -O3")
 
-include(GoogleTest)
+
 include(FetchContent)
 
 FetchContent_Declare(
@@ -40,5 +40,6 @@ add_executable(gvs_tests test/test.cu)  # Замените на путь к ва
 # Линкование с GoogleTest и вашей библиотекой imp
 target_link_libraries(gvs_tests PRIVATE GTest::gtest GTest::gtest_main imp)
 
+include(GoogleTest)
 enable_testing()
 gtest_discover_tests(gvs_tests)
