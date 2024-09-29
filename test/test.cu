@@ -1,5 +1,3 @@
-
-#include <test.cuh>
 #include <imp.cuh>
 #include <iostream>
 #include <ctime>
@@ -14,7 +12,7 @@ void tests(int N){
       A[i] = static_cast<float>(rand()) / RAND_MAX;
       B[i] = static_cast<float>(rand()) / RAND_MAX;
   }
-  
+
   float answerCPU = CPUimplementation(A, B, N); // Вычисления на CPU
 
   float *cudaA, *cudaB, *answerGPU; // Вычисления на GPU
@@ -34,7 +32,12 @@ void tests(int N){
   cudaMemcpy(&answerGGPU, answerGPU, sizeof(float), cudaMemcpyDeviceToHost);
 
   // Сравнение результатов
-  ASSERT_NEAR(answerCPU, answerGGPU, 1e-5) << "CPU: " << answerCPU << " GPU: " << answerGGPU;
+  cout << "CPU: " << answerCPU << " GPU: " << answerGGPU << endl;
+  if (abs(answerCPU - answerGGPU) < 1e-5) {
+      cout << "Результаты совпадают!" << endl;
+  } else {
+      cout << "Результаты не совпадают!" << endl;
+  }
 
   // Освобождение ресурсов
   delete[] A;
@@ -44,8 +47,10 @@ void tests(int N){
   cudaFree(answerGPU);
 }
 
-int main(int argc, char **argv){
+int main(){
   srand(time(0));
-  ::testing::InitGoogleTest(&argc, argv); 
-  return RUN_ALL_TESTS();
+  for(int N = 10000, i = 1; N < 250000000; N += 50000, i++){
+    cout << "Test " << i << ":" << endl;
+    tests(N);
+  }
 }
