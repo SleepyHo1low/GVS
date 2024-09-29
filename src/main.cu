@@ -2,7 +2,7 @@
 #include <iostream>
 #include <ctime>
 
-void tests(N){
+void tests(int N){
   float *A = new float[N];
   float *B = new float[N];
 
