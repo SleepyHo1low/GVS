@@ -33,6 +33,9 @@ set_target_properties(imp PROPERTIES CUDA_ARCHITECTURE "75")
 add_executable(gvs src/imp.cu src/main.cu)
 
 target_include_directories(gvs PUBLIC src)
+target_include_directories(gvs_tests PRIVATE 
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+)
 
 # Создание тестового исполняемого файла для GoogleTest
 add_executable(gvs_tests test/test.cu)  # Замените на путь к вашему тестовому файлу
