@@ -1,8 +1,8 @@
 
+#include <test.cuh>
 #include <imp.cuh>
 #include <iostream>
 #include <ctime>
-#include <gtest/gtest.h>
 
 using namespace std;
 
@@ -42,13 +42,6 @@ void tests(int N){
   cudaFree(cudaA);
   cudaFree(cudaB);
   cudaFree(answerGPU);
-}
-
-TEST(CpuGpuTests, CompareResults) {
-    for (int i = 1; i <= 50; ++i) { // Запускаем 50 тестов с увеличением размера массива
-        int N = 10000 + i * 50000; 
-        tests(N); // Запуск теста
-    }
 }
 
 int main(int argc, char **argv){
