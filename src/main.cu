@@ -12,9 +12,8 @@ void tests(int N){
       A[i] = static_cast<float>(rand()) / RAND_MAX;
       B[i] = static_cast<float>(rand()) / RAND_MAX;
   }
-
-  auto startCPU =high_resolution_clock::now(); // Вычисления на CPU
-  float answerCPU = CPUimplementation(A, B, N);
+  
+  float answerCPU = CPUimplementation(A, B, N); // Вычисления на CPU
 
   float *cudaA, *cudaB, *answerGPU; // Вычисления на GPU
   cudaMalloc(&cudaA, N * sizeof(float));
