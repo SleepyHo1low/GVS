@@ -8,44 +8,18 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CUDA_STANDARD 17)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -O3")
 
-# Добавление GoogleTest с использованием FetchContent
-include(FetchContent)
-
-FetchContent_Declare(
-    googletest
-    GIT_REPOSITORY https://github.com/google/googletest.git
-    GIT_TAG v1.15.2
-)
-
-# Загружаем GoogleTest
-FetchContent_MakeAvailable(googletest)
-
-# Создание библиотеки imp
 add_library(imp STATIC
     src/imp.cu
     src/imp.cuh
+    test/test.cuh
 )
 
 target_compile_features(imp PRIVATE cuda_std_17)
 set_target_properties(imp PROPERTIES CUDA_ARCHITECTURE "75")
 
-# Создание исполняемого файла gvs
 add_executable(gvs src/imp.cu src/main.cu)
 add_executable(gvs_tests src/imp.cu test/test.cu)
 
 
 target_include_directories(gvs PUBLIC src)
-target_include_directories(gvs_tests PRIVATE 
-    ${CMAKE_CURRENT_SOURCE_DIR}/src
-)
-
-target_link_libraries(gvs_tests PRIVATE 
-    imp 
-    GTest::gtest 
-    GTest::gtest_main 
-)
-
-enable_testing() # Включаем тестирование
-
-include(GoogleTest)
-gtest_discover_tests(gvs_tests)
+target_include_directories(gvs_tests PUBLIC src)
