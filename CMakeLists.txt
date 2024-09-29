@@ -31,6 +31,8 @@ set_target_properties(imp PROPERTIES CUDA_ARCHITECTURE "75")
 
 # Создание исполняемого файла gvs
 add_executable(gvs src/imp.cu src/main.cu)
+add_executable(gvs_tests src/imp.cu test/test.cu)
+
 
 target_include_directories(gvs PUBLIC src)
 target_include_directories(gvs_tests PRIVATE 
