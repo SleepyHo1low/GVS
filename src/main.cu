@@ -2,6 +2,8 @@
 #include <iostream>
 #include <ctime>
 
+using namespace std;
+
 void tests(int N){
   float *A = new float[N];
   float *B = new float[N];
