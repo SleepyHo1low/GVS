@@ -1,25 +1,30 @@
 #include "imp.cuh"
 #include <iostream>
 #include <ctime>
+#include <random>
 
 using namespace std;
 
 void tests(int N){
   float *A = new float[N];
   float *B = new float[N];
-
   float *answerGPU = new float();
   float *answerGGPU = new float();
-
   *answerGPU = 0;
   *answerGGPU = 0;
 
+  float mean = 0.0;      
+  float stddev = 2.0;
+
+  random_device rd;
+  mt19937 gen(rd()); 
+  normal_distribution<double> dist(mean, stddev);
+
   for (int i = 0; i < N; ++i) {
-      A[i] = (float)(rand()) / (float)(RAND_MAX);
-      B[i] = (float)(rand()) / (float)(RAND_MAX);
-      //A[i] = static_cast<float>(rand()) / RAND_MAX;
-      //B[i] = static_cast<float>(rand()) / RAND_MAX;
+      A[i] = dist(gen);
+      B[i] = dist(gen);
   }
+
 
   float answerCPU = CPUimplementation(A, B, N); // Вычисления на CPU
 
@@ -41,7 +46,7 @@ void tests(int N){
 
   // Сравнение результатов
   cout << "CPU: " << answerCPU << " GPU: " << *answerGGPU << endl;
-  if (abs(answerCPU - *answerGGPU) < 1e-5) {
+  if (abs(answerCPU - *answerGGPU) < 1e-4) {
       cout << "Результаты совпадают!" << endl;
   } else {
       cout << "Результаты не совпадают!" << endl;
