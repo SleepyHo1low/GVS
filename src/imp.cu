@@ -16,22 +16,21 @@ __global__ void GPUimplementation(float* a, float* b, float* result, int N)
 
         // Вычисление локальной суммы
         partialSums[tid] = a_local * b_local;
-    }
 
-    // Суммирование результатов в пределах блока
-    __syncthreads();
-    for (int s = blockDim.x / 2; s > 0; s >>= 1) {
-        if (tid < s) {
-            partialSums[tid] += partialSums[tid + s];
-        }
+        // Суммирование результатов в пределах блока
         __syncthreads();
-    }
+        for (int s = blockDim.x / 2; s > 0; s >>= 1) {
+            if (tid < s) {
+                partialSums[tid] += partialSums[tid + s];
+            }
+            __syncthreads();
+        }
 
-    // Запись результата в глобальную память
-    if (tid == 0) {
-        atomicAdd(result, partialSums[0]);
+        // Запись результата в глобальную память
+        if (tid == 0) {
+            atomicAdd(result, partialSums[0]);
+        }
     }
-    
 }
 
 float CPUimplementation(float* a, float* b, int N)
