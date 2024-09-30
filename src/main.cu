@@ -44,7 +44,7 @@ int main()
 
     cudaMemset(answerGPU, 0, sizeof(float));
 
-    int number_of_blocks = N / THREADS_PER_BLOCK + 1;
+    int number_of_blocks =  (N + THREADS_PER_BLOCK - 1) / THREADS_PER_BLOCK;;
 
     //cout<<"THREADS_PER_BLOCK = "<<THREADS_PER_BLOCK<<endl;
     //cout<<"number_of_blocks = "<<number_of_blocks<<endl;
@@ -53,7 +53,7 @@ int main()
     cudaEventCreate(&stopGPU);
 
     cudaEventRecord(startGPU);
-    GPUimplementation<<< number_of_blocks, THREADS_PER_BLOCK >>>(cudaA, cudaB, answerGPU, N);
+    GPUimplementation<<< number_of_blocks, THREADS_PER_BLOCK, blockSize * sizeof(float) >>>(cudaA, cudaB, answerGPU, N);
     //cudaDeviceSynchronize();
 
     cudaEventRecord(stopGPU);
