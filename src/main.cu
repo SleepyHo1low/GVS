@@ -53,7 +53,7 @@ int main()
     cudaEventCreate(&stopGPU);
 
     cudaEventRecord(startGPU);
-    GPUimplementation<<< number_of_blocks, block_size >>>(cudaA, cudaB, answerGPU);
+    GPUimplementation<<< number_of_blocks, block_size >>>(cudaA, cudaB, answerGPU, N);
     cudaDeviceSynchronize();
 
     
