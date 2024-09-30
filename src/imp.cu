@@ -3,7 +3,7 @@
 __global__ void GPUimplementation(float* a, float* b, float* result, int N)
 {
 
-    __shared__ float partialSums[THREADS_PER_BLOCK];
+    __shared__ float partialSums[TREADS_PER_BLOCK];
     // Инициализация разделяемой памяти нулями
     partialSums[threadIdx.x] = 0.0f;
     int tid = threadIdx.x;
@@ -19,7 +19,7 @@ __global__ void GPUimplementation(float* a, float* b, float* result, int N)
         if( tid ==0){
         
             int sum =0;
-            for( int i=0; i<N; i++){
+            for( int i=0; i<TREADS_PER_BLOCK; i++){
                 sum+=partialSums[i];
             }
             atomicAdd(result, sum);

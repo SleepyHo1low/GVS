@@ -45,8 +45,7 @@ int main()
     cudaMemcpy(cudaA, A, floatS, cudaMemcpyHostToDevice);
     cudaMemcpy(cudaB, B, floatS, cudaMemcpyHostToDevice);
 
-    const int block_size = 256;
-    int number_of_blocks = N / block_size + 1;
+    int number_of_blocks = N / TREADS_PER_BLOCK + 1;
 
     cudaEvent_t startGPU, stopGPU;
     cudaEventCreate(&startGPU);
