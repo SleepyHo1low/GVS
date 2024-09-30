@@ -54,7 +54,7 @@ int main()
     cudaEventCreate(&stopGPU);
 
     cudaEventRecord(startGPU);
-    GPUimplementation<<< number_of_blocks, TREADS_PER_BLOCK >>>(cudaA, cudaB, answerGPU, N);
+    GPUimplementation<<< number_of_blocks, THREADS_PER_BLOCK >>>(cudaA, cudaB, answerGPU, N);
     cudaDeviceSynchronize();
 
     
