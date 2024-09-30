@@ -19,7 +19,7 @@ __global__ void GPUimplementation(float* a, float* b, float* result, int N)
 
         // Суммирование результатов в пределах блока
         __syncthreads();
-        for (int s = blockDim.x / 2; s > 0; s >>= 1) {
+        for (int s = blockDim.x / 2; s > 0; s=s/2) {
             if (tid < s) {
                 partialSums[tid] += partialSums[tid + s];
             }
