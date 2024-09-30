@@ -9,14 +9,14 @@ __global__ void GPUimplementation(float* a, float* b, float* result)
     int tid = threadIdx.x;
     int i = blockIdx.x * blockDim.x + tid;
 
-    if (i<N){
+    
     // Загрузка данных из глобальной памяти в разделяемую
     float a_local = a[i];
     float b_local = b[i];
 
     // Вычисление локальной суммы
     partialSums[tid] = a_local * b_local;
-    }
+    
 
     // Суммирование результатов в пределах блока
     __syncthreads();
