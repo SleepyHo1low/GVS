@@ -9,8 +9,10 @@ void tests(int N){
   float *B = new float[N];
 
   for (int i = 0; i < N; ++i) {
-      A[i] = static_cast<float>(rand()) / RAND_MAX;
-      B[i] = static_cast<float>(rand()) / RAND_MAX;
+      A[i] = (float)(rand()) / (float)(RAND_MAX);
+      B[i] = (float)(rand()) / (float)(RAND_MAX);
+      //A[i] = static_cast<float>(rand()) / RAND_MAX;
+      //B[i] = static_cast<float>(rand()) / RAND_MAX;
   }
 
   float answerCPU = CPUimplementation(A, B, N); // Вычисления на CPU
