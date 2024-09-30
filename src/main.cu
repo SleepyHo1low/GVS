@@ -68,7 +68,7 @@ int main()
 
     float milliseconds = 0;
     cudaEventElapsedTime(&milliseconds, startGPU, stopGPU);
-
+    cout<< "Num elements: "<< N<<endl;
     cout << "Answer (GPU): " << answerGGPU << " time: " << milliseconds << " ms" << endl;
     cout << "Diff (CPU - GPU): " << answerCPU - answerGGPU<<endl;
     cudaFree(cudaA);
