@@ -28,6 +28,7 @@ int main()
     answerCPU = CPUimplementation(A, B, N);
     auto stop = high_resolution_clock::now();
 
+    cout<< "Num elements: "<< N<<endl;
     cout << "Answer (CPU): " << answerCPU << " time: " << duration_cast<milliseconds>(stop - start).count() << " ms" << endl;
     
     //GPU
@@ -68,7 +69,6 @@ int main()
 
     float milliseconds = 0;
     cudaEventElapsedTime(&milliseconds, startGPU, stopGPU);
-    cout<< "Num elements: "<< N<<endl;
     cout << "Answer (GPU): " << answerGGPU << " time: " << milliseconds << " ms" << endl;
     cout << "Diff (CPU - GPU): " << answerCPU - answerGGPU<<endl;
     cudaFree(cudaA);
