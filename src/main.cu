@@ -35,12 +35,12 @@ int main()
     float *answerGPU, *cudaA, cudaB;
     float answerGGPU =0;
 
-    cudaMalloc(&cudaA, floatS);
-    cudaMalloc(&cudaB, floatS);
-    cudaMalloc(&answerGPU, sizeof(float));
+    cudaMalloc(cudaA, floatS);
+    cudaMalloc(cudaB, floatS);
+    cudaMalloc(answerGPU, sizeof(float));
 
-    cudaMemcpy(cudaA, A, floatS, cudaMemcpyHostToDevice);
-    cudaMemcpy(cudaB, B, floatS, cudaMemcpyHostToDevice);
+    cudaMemcpy(&cudaA, A, floatS, cudaMemcpyHostToDevice);
+    cudaMemcpy(&cudaB, B, floatS, cudaMemcpyHostToDevice);
 
     cudaMemset(answerGPU, 0, sizeof(float));
 
@@ -69,7 +69,7 @@ int main()
     float milliseconds = 0;
     cudaEventElapsedTime(&milliseconds, startGPU, stopGPU);
 
-    cout << "Answer (GPU): " << *answerGGPU << " time: " << milliseconds << " ms" << endl;
+    cout << "Answer (GPU): " << answerGGPU << " time: " << milliseconds << " ms" << endl;
 
     cudaFree(cudaA);
     cudaFree(cudaB);
