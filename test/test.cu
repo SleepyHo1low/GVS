@@ -72,7 +72,7 @@ int main(){
   }
 
   cout << "\nРезультаты всех тестов:\n";
-  for (const auto& res : results) {
+  for (const auto& res : result) {
       cout << res << endl;
   }
   
