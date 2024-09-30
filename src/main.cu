@@ -15,7 +15,6 @@ int main()
 
     Data data("/content/Data/data.bin");
     const int N = data.n;
-    const int floatS = N*sizeof(float);
 
     float *A = data.dataA;
     float *B = data.dataB;
@@ -32,11 +31,9 @@ int main()
     cout << "Answer (CPU): " << answerCPU << " time: " << duration_cast<milliseconds>(stop - start).count() << " ms" << endl;
     
     //GPU
-    float *answerGPU = new float(), *answerGGPU = new float();
-    *answerGPU = 0;
-    *answerGGPU = 0;
-    float* cudaA;
-    float* cudaB;
+    const int floatS = N*sizeof(float);
+    float *answerGPU, *cudaA, cudaB;
+    float answerGGPU =0;
 
     cudaMalloc(&cudaA, floatS);
     cudaMalloc(&cudaB, floatS);
@@ -44,6 +41,8 @@ int main()
 
     cudaMemcpy(cudaA, A, floatS, cudaMemcpyHostToDevice);
     cudaMemcpy(cudaB, B, floatS, cudaMemcpyHostToDevice);
+
+    cudaMemset(answerGPU, 0, sizeof(float));
 
     int number_of_blocks = N / THREADS_PER_BLOCK + 1;
 
@@ -55,9 +54,8 @@ int main()
 
     cudaEventRecord(startGPU);
     GPUimplementation<<< number_of_blocks, THREADS_PER_BLOCK >>>(cudaA, cudaB, answerGPU, N);
-    cudaDeviceSynchronize();
+    //cudaDeviceSynchronize();
 
-    
     cudaEventRecord(stopGPU);
     // Проверка ошибок
     cudaError_t error = cudaGetLastError();
@@ -65,7 +63,8 @@ int main()
         std::cout << "CUDA error: " << cudaGetErrorString(error) << std::endl;
         return 1;
     }
-    cudaMemcpy(answerGGPU, answerGPU, sizeof(float), cudaMemcpyDeviceToHost);
+
+    cudaMemcpy(&answerGGPU, answerGPU, sizeof(float), cudaMemcpyDeviceToHost);
 
     float milliseconds = 0;
     cudaEventElapsedTime(&milliseconds, startGPU, stopGPU);
