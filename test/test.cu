@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void tests(int N, vector<string> results){
+void tests(int N, vector<string> &results){
   float *A = new float[N];
   float *B = new float[N];
   float *answerGPU = new float();
