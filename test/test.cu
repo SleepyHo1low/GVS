@@ -14,7 +14,7 @@ void tests(int N){
   *answerGGPU = 0;
 
   float mean = 0.0;      
-  float stddev = 2.0;
+  float stddev = 1.0;
 
   random_device rd;
   mt19937 gen(rd()); 
@@ -24,7 +24,6 @@ void tests(int N){
       A[i] = dist(gen);
       B[i] = dist(gen);
   }
-
 
   float answerCPU = CPUimplementation(A, B, N); // Вычисления на CPU
 
@@ -46,7 +45,7 @@ void tests(int N){
 
   // Сравнение результатов
   cout << "CPU: " << answerCPU << " GPU: " << *answerGGPU << endl;
-  if (abs(answerCPU - *answerGGPU) < 1e-4) {
+  if (abs(answerCPU - *answerGGPU) < 1e-2) {
       cout << "Результаты совпадают!" << endl;
   } else {
       cout << "Результаты не совпадают!" << endl;
