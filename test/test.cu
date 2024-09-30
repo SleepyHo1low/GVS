@@ -59,11 +59,13 @@ void tests(int N, vector<string> &results){
   // Освобождение ресурсов
   delete[] A;
   delete[] B;
+/*
   delete answerGPU;
   delete answerGGPU;
-/*
+
   cudaFree(cudaA);
   cudaFree(cudaB);
+*/
   cudaFree(answerGPU);*/
 }
 
