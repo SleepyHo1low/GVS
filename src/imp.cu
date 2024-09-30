@@ -2,33 +2,27 @@
 
 __global__ void GPUimplementation(float* a, float* b, float* result, int N)
 {
+
+    __shared__ float partialSums[THREADS_PER_BLOCK];
     // Инициализация разделяемой памяти нулями
     partialSums[threadIdx.x] = 0.0f;
-
-    __syncthreads();
     int tid = threadIdx.x;
     int i = blockIdx.x * blockDim.x + tid;
 
     if( i<N){
-        // Загрузка данных из глобальной памяти в разделяемую
-        float a_local = a[i];
-        float b_local = b[i];
 
         // Вычисление локальной суммы
-        partialSums[tid] = a_local * b_local;
+        partialSums[tid] = a[i] * b[i];
 
-        // Суммирование результатов в пределах блока
         __syncthreads();
-        for (int s = blockDim.x / 2; s > 0; s=s/2) {
-            if (tid < s) {
-                partialSums[tid] += partialSums[tid + s];
+        // Суммирование результатов в пределах блока
+        if( tid ==0){
+        
+            int sum =0;
+            for( int i=0; i<N; i++){
+                sum+=partialSums[i];
             }
-            __syncthreads();
-        }
-
-        // Запись результата в глобальную память
-        if (tid == 0) {
-            atomicAdd(result, partialSums[0]);
+            atomicAdd(result, sum);
         }
     }
 }
