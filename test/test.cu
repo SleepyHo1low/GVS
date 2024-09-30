@@ -2,10 +2,11 @@
 #include <iostream>
 #include <ctime>
 #include <random>
+#include <vector>
 
 using namespace std;
 
-void tests(int N){
+void tests(int N, vector<string> result){
   float *A = new float[N];
   float *B = new float[N];
   float *answerGPU = new float();
@@ -42,14 +43,14 @@ void tests(int N){
   cudaDeviceSynchronize();
 
   cudaMemcpy(answerGGPU, answerGPU, sizeof(float), cudaMemcpyDeviceToHost);
-
-  // Сравнение результатов
-  cout << "CPU: " << answerCPU << " GPU: " << *answerGGPU << endl;
+  
+  string result = "CPU: " + to_string(answerCPU) + " GPU: " + to_string(*answerGGPU);
   if (abs(answerCPU - *answerGGPU) < 1e-2) {
-      cout << "Результаты совпадают!" << endl;
+      result += " | Результаты совпадают!";
   } else {
-      cout << "Результаты не совпадают!" << endl;
+      result += " | Результаты не совпадают!";
   }
+  results.push_back(result);
 
   // Освобождение ресурсов
   delete[] A;
@@ -63,8 +64,16 @@ void tests(int N){
 
 int main(){
   srand(time(0));
+  vector<string> result;
+
   for(int i = 0; i < 5; i++){
     cout << "Test " << i << ":" << "N : "  << (1 + pow(10,i)) << endl;
-    tests(1 + pow(10,i));
+    tests(1 + pow(10,i), result);
   }
+
+  cout << "\nРезультаты всех тестов:\n";
+  for (const auto& res : results) {
+      cout << res << endl;
+  }
+  
 }
