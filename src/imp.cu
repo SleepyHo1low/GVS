@@ -1,14 +1,13 @@
 #include "imp.cuh"
 
-__global__ void GPUimplementation(const float* a, const float* b, float* result, int N) {
+__global__ void GPUimplementation(float* a,float* b, float* result, int N) {
     // Каждая нить обрабатывает несколько элементов
     int tid = threadIdx.x;
-    int blockDim = blockDim.x;
-    int i = blockIdx.x * blockDim + tid;
+    int i = blockIdx.x * blockDim.x + tid;
 
     // Разделяемая память для блока
-    __shared__ float shared_a[blockDim];
-    __shared__ float shared_b[blockDim];
+    __shared__ float shared_a[blockDim.x];
+    __shared__ float shared_b[blockDim.x];
 
     // Копирование данных из глобальной памяти в разделяемую
     shared_a[tid] = a[i];
@@ -17,7 +16,7 @@ __global__ void GPUimplementation(const float* a, const float* b, float* result,
 
     // Вычисление локальной суммы
     float sum = 0;
-    for (int stride = blockDim/2; stride > 0; stride >>= 1) {
+    for (int stride = blockDim.x/2; stride > 0; stride >>= 1) {
         if (tid < stride) {
             sum += shared_a[tid+stride] * shared_b[tid+stride];
         }
