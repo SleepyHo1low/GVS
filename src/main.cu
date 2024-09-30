@@ -75,8 +75,6 @@ int main()
     cudaFree(cudaA);
     cudaFree(cudaB);
     cudaFree(answerGPU);
-    cudaFree(answerGGPU);
-
 
 
     return(0);
