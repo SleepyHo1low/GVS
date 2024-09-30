@@ -30,7 +30,7 @@ __global__ void GPUimplementation(float *a, float *b, float *result, int n) {
     }
 
     if (tid == 0) {
-        atomicAdd(c, sdata[0]);
+        atomicAdd(result, sdata[0]);
     }
 }
 
