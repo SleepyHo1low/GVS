@@ -2,7 +2,15 @@
 
 __global__ void GPUimplementation(float* a, float* b, float* result)
 {
-       int tid = threadIdx.x;
+    // Инициализация разделяемой памяти нулями
+    if (threadIdx.x == 0) {
+        for (int i = 0; i < blockDim.x; ++i) {
+            partialSums[i] = 0.0f;
+        }
+    }
+
+    __syncthreads();
+    int tid = threadIdx.x;
     int i = blockIdx.x * blockDim.x + tid;
 
     // Загрузка данных из глобальной памяти в разделяемую
