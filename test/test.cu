@@ -8,6 +8,12 @@ void tests(int N){
   float *A = new float[N];
   float *B = new float[N];
 
+  float *answerGPU = new float();
+  float *answerGGPU = new float();
+
+  *answerGPU = 0;
+  *answerGGPU = 0;
+
   for (int i = 0; i < N; ++i) {
       A[i] = (float)(rand()) / (float)(RAND_MAX);
       B[i] = (float)(rand()) / (float)(RAND_MAX);
@@ -30,8 +36,8 @@ void tests(int N){
 
   GPUimplementation<<<number_of_blocks, block_size>>>(cudaA, cudaB, answerGPU);
   cudaDeviceSynchronize();
-  float answerGGPU;
-  cudaMemcpy(&answerGGPU, answerGPU, sizeof(float), cudaMemcpyDeviceToHost);
+
+  cudaMemcpy(answerGGPU, answerGPU, sizeof(float), cudaMemcpyDeviceToHost);
 
   // Сравнение результатов
   cout << "CPU: " << answerCPU << " GPU: " << answerGGPU << endl;
@@ -44,6 +50,8 @@ void tests(int N){
   // Освобождение ресурсов
   delete[] A;
   delete[] B;
+  delete() answerGPU;
+  delete() answerGGPU
   cudaFree(cudaA);
   cudaFree(cudaB);
   cudaFree(answerGPU);
