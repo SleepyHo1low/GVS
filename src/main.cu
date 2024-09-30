@@ -56,14 +56,14 @@ int main()
     GPUimplementation<<< number_of_blocks, block_size >>>(cudaA, cudaB, answerGPU);
     cudaDeviceSynchronize();
 
+    
+    cudaEventRecord(stopGPU);
     // Проверка ошибок
     cudaError_t error = cudaGetLastError();
     if (error != cudaSuccess) {
         std::cout << "CUDA error: " << cudaGetErrorString(error) << std::endl;
         return 1;
     }
-    cudaEventRecord(stopGPU);
-
     cudaMemcpy(answerGGPU, answerGPU, sizeof(float), cudaMemcpyDeviceToHost);
 
     float milliseconds = 0;
