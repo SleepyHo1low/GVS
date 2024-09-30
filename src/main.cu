@@ -32,15 +32,15 @@ int main()
     
     //GPU
     const int floatS = N*sizeof(float);
-    float *answerGPU, *cudaA, cudaB;
+    float *answerGPU, *cudaA, *cudaB;
     float answerGGPU =0;
 
-    cudaMalloc(cudaA, floatS);
-    cudaMalloc(cudaB, floatS);
-    cudaMalloc(answerGPU, sizeof(float));
+    cudaMalloc(&cudaA, floatS);
+    cudaMalloc(&cudaB, floatS);
+    cudaMalloc(&answerGPU, sizeof(float));
 
-    cudaMemcpy(&cudaA, A, floatS, cudaMemcpyHostToDevice);
-    cudaMemcpy(&cudaB, B, floatS, cudaMemcpyHostToDevice);
+    cudaMemcpy(cudaA, A, floatS, cudaMemcpyHostToDevice);
+    cudaMemcpy(cudaB, B, floatS, cudaMemcpyHostToDevice);
 
     cudaMemset(answerGPU, 0, sizeof(float));
 
