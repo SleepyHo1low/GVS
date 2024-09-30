@@ -66,7 +66,7 @@ void tests(int N, vector<string> &results){
   cudaFree(cudaA);
   cudaFree(cudaB);
 */
-  cudaFree(answerGPU);*/
+  cudaFree(answerGPU);
 }
 
 int main(){
