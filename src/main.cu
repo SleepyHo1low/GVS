@@ -20,10 +20,9 @@ int main()
     float *A = data.dataA;
     float *B = data.dataB;
 
-    float answerCPU, *answerGPU = new float(), *answerGGPU = new float();
+    float answerCPU;
 
-    *answerGPU = 0;
-    *answerGGPU = 0;
+   
 
     //CPU
     auto start = high_resolution_clock::now();
@@ -33,7 +32,9 @@ int main()
     cout << "Answer (CPU): " << answerCPU << " time: " << duration_cast<milliseconds>(stop - start).count() << " ms" << endl;
     
     //GPU
-
+    float *answerGPU = new float(), *answerGGPU = new float();
+    *answerGPU = 0;
+    *answerGGPU = 0;
     float* cudaA;
     float* cudaB;
 
@@ -55,6 +56,12 @@ int main()
     GPUimplementation<<< number_of_blocks, block_size >>>(cudaA, cudaB, answerGPU);
     cudaDeviceSynchronize();
 
+    // Проверка ошибок
+    cudaError_t error = cudaGetLastError();
+    if (error != cudaSuccess) {
+        std::cout << "CUDA error: " << cudaGetErrorString(error) << std::endl;
+        return 1;
+    }
     cudaEventRecord(stopGPU);
 
     cudaMemcpy(answerGGPU, answerGPU, sizeof(float), cudaMemcpyDeviceToHost);

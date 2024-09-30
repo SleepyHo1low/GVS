@@ -35,5 +35,5 @@ float CPUimplementation(float* a, float* b, int N)
         temp += a[i] * b[i];
     }
 
-    return(temp);
+    return temp;
 }
