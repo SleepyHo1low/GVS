@@ -3,22 +3,20 @@
 __global__ void GPUimplementation(float* a, float* b, float* result)
 {
     // Инициализация разделяемой памяти нулями
-    if (threadIdx.x == 0) {
-        for (int i = 0; i < blockDim.x; ++i) {
-            partialSums[i] = 0.0f;
-        }
-    }
+    partialSums[threadIdx.x] = 0.0f;
 
     __syncthreads();
     int tid = threadIdx.x;
     int i = blockIdx.x * blockDim.x + tid;
 
+    if (i<N){
     // Загрузка данных из глобальной памяти в разделяемую
     float a_local = a[i];
     float b_local = b[i];
 
     // Вычисление локальной суммы
     partialSums[tid] = a_local * b_local;
+    }
 
     // Суммирование результатов в пределах блока
     __syncthreads();
@@ -37,7 +35,7 @@ __global__ void GPUimplementation(float* a, float* b, float* result)
 
 float CPUimplementation(float* a, float* b, int N)
 {
-    float temp = 0;
+    float temp = 0.0f;
     for (int i = 0; i < N; ++i)
     {
         temp += a[i] * b[i];
