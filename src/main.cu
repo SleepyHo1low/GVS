@@ -73,7 +73,9 @@ int main()
 
     cudaFree(cudaA);
     cudaFree(cudaB);
+    cudaFree(partialSums);
     cudaFree(answerGPU);
+    cudaFree(answerGGPU)
 
 
 
