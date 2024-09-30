@@ -23,7 +23,7 @@ void tests(int N){
 
   float answerCPU = CPUimplementation(A, B, N); // Вычисления на CPU
 
-  float *cudaA, *cudaB, *answerGPU; // Вычисления на GPU
+  float *cudaA, *cudaB; // Вычисления на GPU
   cudaMalloc(&cudaA, N * sizeof(float));
   cudaMalloc(&cudaB, N * sizeof(float));
   cudaMalloc(&answerGPU, sizeof(float));
@@ -41,7 +41,7 @@ void tests(int N){
 
   // Сравнение результатов
   cout << "CPU: " << answerCPU << " GPU: " << answerGGPU << endl;
-  if (abs(answerCPU - answerGGPU) < 1e-5) {
+  if (abs(answerCPU - *answerGGPU) < 1e-5) {
       cout << "Результаты совпадают!" << endl;
   } else {
       cout << "Результаты не совпадают!" << endl;
@@ -51,7 +51,7 @@ void tests(int N){
   delete[] A;
   delete[] B;
   delete answerGPU;
-  delete answerGGPU
+  delete answerGGPU;
   cudaFree(cudaA);
   cudaFree(cudaB);
   cudaFree(answerGPU);
