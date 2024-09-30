@@ -14,7 +14,7 @@ void tests(int N, vector<string> &results){
   *answerGPU = 0;
   *answerGGPU = 0;
 
-  /*float mean = 0.0;      
+  float mean = 0.0;      
   float stddev = 1.0;
 
   random_device rd;
@@ -24,12 +24,12 @@ void tests(int N, vector<string> &results){
   for (int i = 0; i < N; ++i) {
       A[i] = dist(gen);
       B[i] = dist(gen);
-  }*/
+  }
 
-  for (int i = 0; i < N; ++i) {
+  /*for (int i = 0; i < N; ++i) {
         A[i] = static_cast<float>(rand()) / RAND_MAX;
         B[i] = static_cast<float>(rand()) / RAND_MAX;
-  }
+  }*/
   float answerCPU = CPUimplementation(A, B, N); // Вычисления на CPU
 
   float *cudaA, *cudaB; // Вычисления на GPU
@@ -70,7 +70,7 @@ int main(){
   srand(time(0));
   vector<string> result;
 
-  for(int i = 0; i < 5; i++){
+  for(int i = 0; i < 9; i++){
     cout << "Test " << i << ":" << "N : "  << (1 + pow(10,i)) << endl;
     tests(1 + pow(10,i), result);
   }
