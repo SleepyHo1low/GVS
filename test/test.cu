@@ -64,7 +64,7 @@ void tests(int N){
 int main(){
   srand(time(0));
   for(int i = 0; i < 5; i++){
-    cout << "Test " << i << ":" << endl;
+    cout << "Test " << i << ":" << "N : "  << (1 + pow(10,i)) << endl;
     tests(1 + pow(10,i));
   }
 }
