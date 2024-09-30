@@ -57,13 +57,13 @@ void tests(int N, vector<string> results){
   results.push_back(result);
 
   // Освобождение ресурсов
-  delete[] A;
+  /*delete[] A;
   delete[] B;
   delete answerGPU;
   delete answerGGPU;
   cudaFree(cudaA);
   cudaFree(cudaB);
-  cudaFree(answerGPU);
+  cudaFree(answerGPU);*/
 }
 
 int main(){
