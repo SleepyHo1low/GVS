@@ -37,7 +37,7 @@ void tests(int N, vector<string> results){
   cudaMemcpy(cudaB, B, N * sizeof(float), cudaMemcpyHostToDevice);
 
   const int block_size = 256;
-  int number_of_blocks = N/block_size + 1;
+  int number_of_blocks = (N + block_size - 1) / block_size;
 
   GPUimplementation<<<number_of_blocks, block_size>>>(cudaA, cudaB, answerGPU);
   cudaDeviceSynchronize();
