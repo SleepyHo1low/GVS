@@ -33,7 +33,7 @@ int main()
     //GPU
     const int floatS = N*sizeof(float);
     float *answerGPU, *cudaA, *cudaB;
-    float answerGGPU =5;
+    float answerGGPU;
 
     cudaMalloc(&cudaA, floatS);
     cudaMalloc(&cudaB, floatS);
