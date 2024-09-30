@@ -50,8 +50,8 @@ void tests(int N){
   // Освобождение ресурсов
   delete[] A;
   delete[] B;
-  delete() answerGPU;
-  delete() answerGGPU
+  delete answerGPU;
+  delete answerGGPU
   cudaFree(cudaA);
   cudaFree(cudaB);
   cudaFree(answerGPU);
