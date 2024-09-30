@@ -1,4 +1,4 @@
-#include "src/imp.cuh"
+#include "imp.cuh"
 #include <iostream>
 #include <ctime>
 
