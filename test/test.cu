@@ -41,7 +41,7 @@ void tests(int N){
 
   // Сравнение результатов
   cout << "CPU: " << answerCPU << " GPU: " << answerGGPU << endl;
-  if (abs(answerCPU - &answerGGPU) < 1e-5) {
+  if (abs(answerCPU - &(answerGGPU)) < 1e-5) {
       cout << "Результаты совпадают!" << endl;
   } else {
       cout << "Результаты не совпадают!" << endl;
