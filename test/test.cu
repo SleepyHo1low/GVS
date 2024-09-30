@@ -73,7 +73,7 @@ int main(){
   srand(time(0));
   vector<string> result;
 
-  for(int i = 0; i < 9; i++){
+  for(int i = 0; i < 10; i++){
     cout << "Test " << i << ":" << "N : "  << (1 + pow(10,i)) << endl;
     tests(1 + pow(10,i), result);
   }
