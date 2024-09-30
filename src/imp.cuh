@@ -6,6 +6,7 @@
 
 #define THREADS_PER_BLOCK 256
 float CPUimplementation(float* a, float* b, int N);
+__global__ void GPUimplementation(float *a, float *b, float *result, int n)
 __global__ void GPUimplementation(float* a, float* b, float* result, int N);
 
 #endif 
