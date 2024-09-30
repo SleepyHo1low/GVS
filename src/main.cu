@@ -46,8 +46,8 @@ int main()
 
     int number_of_blocks = N / THREADS_PER_BLOCK + 1;
 
-    cout<<"THREADS_PER_BLOCK = "<<THREADS_PER_BLOCK<<endl;
-    cout<<"number_of_blocks = "<<number_of_blocks<<endl;
+    //cout<<"THREADS_PER_BLOCK = "<<THREADS_PER_BLOCK<<endl;
+    //cout<<"number_of_blocks = "<<number_of_blocks<<endl;
     cudaEvent_t startGPU, stopGPU;
     cudaEventCreate(&startGPU);
     cudaEventCreate(&stopGPU);
