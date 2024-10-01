@@ -13,7 +13,7 @@ int main()
 {
     srand(time(0));
 
-    Data data("/content/Data/data.bin");
+    Data data("data.bin");
     const int N = data.n;
 
     float *A = data.dataA;
@@ -27,10 +27,12 @@ int main()
     auto start = high_resolution_clock::now();
     answerCPU = CPUimplementation(A, B, N);
     auto stop = high_resolution_clock::now();
-
+    int ms = duration_cast<milliseconds>(stop - start).count();
+    int ns = duration_cast<nanoseconds>(stop - start).count();
     cout<< "Num elements: "<< N<<endl;
-    cout << "Answer (CPU): " << answerCPU << " time: " << duration_cast<milliseconds>(stop - start).count() << " ms" << endl;
-    
+    cout << "Answer (CPU): " << answerCPU << " time: " << 
+        ms<< "."<< ns - ms*1000000 << " ms" << endl;
+    //cout<<" TEST " << ms <<" " << ns << " TEST" << endl;
     //GPU
     const int floatS = N*sizeof(float);
     float *answerGPU, *cudaA, *cudaB;
