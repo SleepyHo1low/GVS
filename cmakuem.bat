@@ -1,4 +1,4 @@
-%bash
+@echo off
 cd C:\Users\Professional\source\repos\GVS
 mkdir build
 cd build
