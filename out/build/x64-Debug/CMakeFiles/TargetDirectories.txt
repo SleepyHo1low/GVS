@@ -1,0 +1,4 @@
+C:/Users/Professional/source/repos/GVS/out/build/x64-Debug/CMakeFiles/imp.dir
+C:/Users/Professional/source/repos/GVS/out/build/x64-Debug/CMakeFiles/gvs.dir
+C:/Users/Professional/source/repos/GVS/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Professional/source/repos/GVS/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

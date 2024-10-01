@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/Professional/source/repos/GVS/out/build/x64-Debug",
+  "command": "C:\\PROGRA~1\\NVIDIA~2\\CUDA\\v12.6\\bin\\nvcc.exe -forward-unknown-to-host-compiler -D_WINDOWS -Xcompiler=\" /EHsc\" -Xcompiler=\" -Ob0 -Od /RTC1\" -std=c++17 \"--generate-code=arch=compute_52,code=[compute_52,sm_52]\" -Xcompiler=-MDd -Xcompiler=-Zi -x cu -c C:\\Users\\Professional\\source\\repos\\GVS\\src\\imp.cu -o CMakeFiles\\imp.dir\\src\\imp.cu.obj -Xcompiler=-FdTARGET_COMPILE_PDB,-FS",
+  "file": "C:\\Users\\Professional\\source\\repos\\GVS\\src\\imp.cu",
+  "output": "CMakeFiles\\imp.dir\\src\\imp.cu.obj"
+},
+{
+  "directory": "C:/Users/Professional/source/repos/GVS/out/build/x64-Debug",
+  "command": "C:\\PROGRA~1\\NVIDIA~2\\CUDA\\v12.6\\bin\\nvcc.exe -forward-unknown-to-host-compiler -IC:\\Users\\Professional\\source\\repos\\GVS\\src -D_WINDOWS -Xcompiler=\" /EHsc\" -Xcompiler=\" -Ob0 -Od /RTC1\" -std=c++17 \"--generate-code=arch=compute_52,code=[compute_52,sm_52]\" -Xcompiler=-MDd -Xcompiler=-Zi -x cu -c C:\\Users\\Professional\\source\\repos\\GVS\\src\\imp.cu -o CMakeFiles\\gvs.dir\\src\\imp.cu.obj -Xcompiler=-FdTARGET_COMPILE_PDB,-FS",
+  "file": "C:\\Users\\Professional\\source\\repos\\GVS\\src\\imp.cu",
+  "output": "CMakeFiles\\gvs.dir\\src\\imp.cu.obj"
+},
+{
+  "directory": "C:/Users/Professional/source/repos/GVS/out/build/x64-Debug",
+  "command": "C:\\PROGRA~1\\NVIDIA~2\\CUDA\\v12.6\\bin\\nvcc.exe -forward-unknown-to-host-compiler -IC:\\Users\\Professional\\source\\repos\\GVS\\src -D_WINDOWS -Xcompiler=\" /EHsc\" -Xcompiler=\" -Ob0 -Od /RTC1\" -std=c++17 \"--generate-code=arch=compute_52,code=[compute_52,sm_52]\" -Xcompiler=-MDd -Xcompiler=-Zi -x cu -c C:\\Users\\Professional\\source\\repos\\GVS\\src\\main.cu -o CMakeFiles\\gvs.dir\\src\\main.cu.obj -Xcompiler=-FdTARGET_COMPILE_PDB,-FS",
+  "file": "C:\\Users\\Professional\\source\\repos\\GVS\\src\\main.cu",
+  "output": "CMakeFiles\\gvs.dir\\src\\main.cu.obj"
+}
+]
