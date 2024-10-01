@@ -8,3 +8,5 @@
 /.vs/slnx.sqlite
 /.vs/VSWorkspaceState.json
 /build
+/out/build/x64-Debug/.cmake/api/v1/reply
+/out/build/x64-Debug/CMakeFiles/3.28.3-msvc11/CompilerIdCUDA
