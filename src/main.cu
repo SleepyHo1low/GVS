@@ -16,7 +16,6 @@ void CPUcalc(float* A, float* B, int N,float &answerCPU) {
     auto stop = high_resolution_clock::now();
     int ms = duration_cast<milliseconds>(stop - start).count();
     int ns = duration_cast<nanoseconds>(stop - start).count();
-    cout << "Num elements: " << N << endl;
     cout << "Answer (CPU): " << answerCPU << " time: " <<
         ms << "." << ns - ms * 1000000 << " ms" << endl;
     return;
@@ -89,17 +88,24 @@ int main()
 
             Data data("data.bin");
             const int N = data.n;
-
             float* A = data.dataA;
             float* B = data.dataB;
 
+            cout << "Num elements: " << N << endl;
+            cout << "\n-------------------------------------------------------------\n";
             float answerCPU;
             CPUcalc(A, B, N, answerCPU);
+            cout << endl;
+            cout << "\n-------------------------------------------------------------\n";
             float answerGGPU;
             GPUcalc(A, B, N, answerGGPU,true);
             cout << "Diff (CPU - GPU): " << answerCPU - answerGGPU << endl;
+            cout << endl;
+            cout << "\n-------------------------------------------------------------\n";
             GPUcalc(A, B, N, answerGGPU, false);
             cout << "Diff (CPU - GPU): " << answerCPU - answerGGPU << endl;
+            cout << endl;
+            cout << "\n-------------------------------------------------------------\n";
         }
         else
             cout << "Incorrect input:" << action;
