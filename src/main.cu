@@ -66,11 +66,12 @@ int main()
             cudaEventCreate(&startGPU);
             cudaEventCreate(&stopGPU);
 
-            cudaEventRecord(startGPU);
+            cudaEventRecord(startGPU,0);
+            //GPUatomicimplementation << < number_of_blocks, THREADS_PER_BLOCK, THREADS_PER_BLOCK * sizeof(float) >> > (cudaA, cudaB, answerGPU, N);
             GPUimplementation << < number_of_blocks, THREADS_PER_BLOCK, THREADS_PER_BLOCK * sizeof(float) >> > (cudaA, cudaB, answerGPU, N);
-            //cudaDeviceSynchronize();
+            cudaEventRecord(stopGPU,0);
+            cudaEventSynchronize(stopGPU);
 
-            cudaEventRecord(stopGPU);
             // Проверка ошибок
             cudaError_t error = cudaGetLastError();
             if (error != cudaSuccess) {
@@ -82,6 +83,7 @@ int main()
 
             float milliseconds = 0;
             cudaEventElapsedTime(&milliseconds, startGPU, stopGPU);
+            
             cout << "Answer (GPU): " << answerGGPU << " time: " << milliseconds << " ms" << endl;
             cout << "Diff (CPU - GPU): " << answerCPU - answerGGPU << endl;
             cudaFree(cudaA);

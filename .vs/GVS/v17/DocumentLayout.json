@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Professional\\source\\repos\\GVS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Professional\\source\\repos\\GVS\\src\\imp.cu||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\imp.cu||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Professional\\source\\repos\\GVS\\src\\main.cu||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main.cu||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Professional\\source\\repos\\GVS\\src\\data.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\data.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Professional\\source\\repos\\GVS\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Professional\\source\\repos\\GVS\\cmakuem.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cmakuem.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,37 +30,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "data.cpp",
-              "DocumentMoniker": "C:\\Users\\Professional\\source\\repos\\GVS\\src\\data.cpp",
-              "RelativeDocumentMoniker": "src\\data.cpp",
-              "ToolTip": "C:\\Users\\Professional\\source\\repos\\GVS\\src\\data.cpp",
-              "RelativeToolTip": "src\\data.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-30T19:39:24.273Z"
+              "DocumentIndex": 0,
+              "Title": "imp.cu",
+              "DocumentMoniker": "C:\\Users\\Professional\\source\\repos\\GVS\\src\\imp.cu",
+              "RelativeDocumentMoniker": "src\\imp.cu",
+              "ToolTip": "C:\\Users\\Professional\\source\\repos\\GVS\\src\\imp.cu",
+              "RelativeToolTip": "src\\imp.cu",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-02T12:08:31.788Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CMakeLists.txt",
-              "DocumentMoniker": "C:\\Users\\Professional\\source\\repos\\GVS\\CMakeLists.txt",
-              "RelativeDocumentMoniker": "CMakeLists.txt",
-              "ToolTip": "C:\\Users\\Professional\\source\\repos\\GVS\\CMakeLists.txt",
-              "RelativeToolTip": "CMakeLists.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-09-30T19:06:35.103Z"
+              "Title": "cmakuem.bat",
+              "DocumentMoniker": "C:\\Users\\Professional\\source\\repos\\GVS\\cmakuem.bat",
+              "RelativeDocumentMoniker": "cmakuem.bat",
+              "ToolTip": "C:\\Users\\Professional\\source\\repos\\GVS\\cmakuem.bat",
+              "RelativeToolTip": "cmakuem.bat",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA9AAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFjSURBVDhPY6AI/P//n7G1s\u002Bc/lEsWYILSRANbaysUmgHkgl\u002B/fpGFQXqxuuDkyZMMEydOBNOEAIYBixYvZhARl2QIiohi4BeTYJg\u002BcxZUBjtAMeDSpUsM1rb2DEoKcgwnDx9kUFOQZ7BxcQeL4wIoBuzfv5\u002BBjZOTYe2aNQyRkZEM69auYWBjY2VYv3UHw4otuxl2HzzK8OPHD6hqCEAxwNHRkeHrt28MQcEhDMuXL2cIANLP33xgUPdNYdB3dGN4JajGcPrSVahqCEAxQE9Pj\u002BHE4UMMV\u002B89ZNC1tGW4dOcBw7kzZxn0lYQZLj/5zGCoLMrw9NU7qGoIwAjEhLhYhm9vXjDsWLOC4fe7lwxm\u002BloMl\u002B69ZdCV4WW4cO8Ng4meNlQlBLBAaRRgbm4OxiAA8vOPU2cZLj34xqCnpswgIyYFFocBDBegAw4ODgYXO2uGcB9XBh01JTAfGVCcFwYaMDAAABi9qE6NKlarAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-10-01T12:10:58.702Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.cu",
               "DocumentMoniker": "C:\\Users\\Professional\\source\\repos\\GVS\\src\\main.cu",
               "RelativeDocumentMoniker": "src\\main.cu",
               "ToolTip": "C:\\Users\\Professional\\source\\repos\\GVS\\src\\main.cu",
               "RelativeToolTip": "src\\main.cu",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-09-23T08:25:26.097Z",
               "EditorCaption": ""
