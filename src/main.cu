@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <iostream>
 #include <chrono>
 #include <ctime>
@@ -9,6 +9,13 @@
 using namespace std;
 using namespace std::chrono;
 
+void lineInConsole(char ch) {
+    cout << "\n\n";
+    for (int i = 0; i < 50; i++) {
+        cout << ch;
+    }
+    cout << "\n";
+}
 void CPUcalc(float* A, float* B, int N,float &answerCPU) {
     //CPU
     auto start = high_resolution_clock::now();
@@ -50,7 +57,7 @@ void GPUcalc(float* A, float* B, int N, float& answerGGPU,bool is_atomic) {
     cudaEventRecord(stopGPU, 0);
     cudaEventSynchronize(stopGPU);
 
-    // Ïðîâåðêà îøèáîê
+    // ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð¾ÑˆÐ¸Ð±Ð¾Ðº
     cudaError_t error = cudaGetLastError();
     if (error != cudaSuccess) {
         std::cout << "CUDA error: " << cudaGetErrorString(error) << std::endl;
@@ -71,8 +78,26 @@ void GPUcalc(float* A, float* B, int N, float& answerGGPU,bool is_atomic) {
     return;
 }
 
+void showDevice() {
+    int device_count;
+    cudaGetDeviceCount(&device_count);
+    cout << "count GPU device :" << device_count << endl;
+    cudaDeviceProp prop;
+    for (int i = 0; i < device_count; i++) {
+        cout<< endl << i << ". ";
+        cudaGetDeviceProperties(&prop, i);
+        cout << "Device Name: " << prop.name << std::endl;
+        cout << "Compute Capability: " << prop.major << "." << prop.minor
+            << endl;
+        cout << "Total Global Memory: " << prop.totalGlobalMem / (1024 * 1024) << " MB" << endl;
+    }
+    return;
+}
 int main()
 {
+    lineInConsole('#');
+    showDevice();
+    lineInConsole('#');
     while (1) {
         cout << "1. DO\n"
             << "2. CLR data\n"
@@ -92,20 +117,17 @@ int main()
             float* B = data.dataB;
 
             cout << "Num elements: " << N << endl;
-            cout << "\n-------------------------------------------------------------\n";
+            lineInConsole('#');
             float answerCPU;
             CPUcalc(A, B, N, answerCPU);
-            cout << endl;
-            cout << "\n-------------------------------------------------------------\n";
+            lineInConsole('#');
             float answerGGPU;
             GPUcalc(A, B, N, answerGGPU,true);
             cout << "Diff (CPU - GPU): " << answerCPU - answerGGPU << endl;
-            cout << endl;
-            cout << "\n-------------------------------------------------------------\n";
+            lineInConsole('#');
             GPUcalc(A, B, N, answerGGPU, false);
             cout << "Diff (CPU - GPU): " << answerCPU - answerGGPU << endl;
-            cout << endl;
-            cout << "\n-------------------------------------------------------------\n";
+            lineInConsole('#');
         }
         else
             cout << "Incorrect input:" << action;
