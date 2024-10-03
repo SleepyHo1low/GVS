@@ -5,5 +5,5 @@ cd build
 cmake ..	
 cmake --build .
 cd Debug
-set CUDA_VISIBLE_DEVICES=1
+set CUDA_VISIBLE_DEVICES=0
 gvs.exe
