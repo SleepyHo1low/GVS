@@ -1,5 +1,6 @@
 ﻿#include <stdio.h>
 #include <iostream>
+#include <iomanip>
 #include <chrono>
 #include <ctime>
 #include <curand.h>
@@ -23,8 +24,8 @@ void CPUcalc(float* A, float* B, int N,float &answerCPU) {
     auto stop = high_resolution_clock::now();
     int ms = duration_cast<milliseconds>(stop - start).count();
     int ns = duration_cast<nanoseconds>(stop - start).count();
-    cout << "Answer (CPU): " << answerCPU << " time: " <<
-        ms << "." << ns - ms * 1000000 << " ms" << endl;
+    cout << setw(20) << "Answer (CPU): " << setw(20) << answerCPU << " time: " << setw(20) <<
+       to_string(ms) + "." + to_string(ns - ms * 1000000) << " ms" << endl;
     return;
 }
 
@@ -70,8 +71,8 @@ void GPUcalc(float* A, float* B, int N, float& answerGGPU,bool is_atomic) {
     float milliseconds = 0;
     cudaEventElapsedTime(&milliseconds, startGPU, stopGPU);
     is_atomic ?
-        cout << "Answer (GPUatomic): " << answerGGPU << " time: " << milliseconds << " ms" << endl :
-        cout << "Answer (GPU): " << answerGGPU << " time: " << milliseconds << " ms" << endl;
+        cout <<setw(20)<< "Answer (GPUatomic): " << setw(20) << answerGGPU << " time: " << setw(20) << milliseconds << " ms" << endl :
+        cout << setw(20) << "Answer (GPU): " << setw(20) << answerGGPU << " time: " << setw(20) << milliseconds << " ms" << endl;
     cudaFree(cudaA);
     cudaFree(cudaB);
     cudaFree(answerGPU);
