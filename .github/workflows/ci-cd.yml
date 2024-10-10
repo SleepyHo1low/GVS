@@ -4,15 +4,15 @@ on:
   push:
     branches: 
       - test
-
-build:
-  runs-on: ubuntu-latest;
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Compile CUDA program
-      uses: nvcc test.cu -o test.out
-
-    - name: Run tests
-      uses: ./test.out
+jobs:
+  build:
+    runs-on: ubuntu-latest;
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+  
+      - name: Compile CUDA program
+        run: nvcc test.cu -o test.out
+  
+      - name: Run tests
+        run: ./test.out
