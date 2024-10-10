@@ -12,9 +12,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install CUDA
+      - name: Install dependencies
         run: |
           sudo apt-get update
+          sudo apt-get install -y wget gnupg2
+
+      - name: Add NVIDIA package repository
+        run: |
+          wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
+          sudo dpkg -i cuda-keyring_1.1-1_all.deb
+          sudo apt-get update
+
+      - name: Install CUDA
+        run: |
           sudo apt-get install -y cuda
 
       - name: Set up PATH for CUDA
