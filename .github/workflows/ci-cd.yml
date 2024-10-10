@@ -3,16 +3,30 @@ name: CI/CD Pipeline
 on: 
   push:
     branches: 
-      - test;
+      - test
 
-build:
-  runs-on: ubuntu-latest;
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Compile CUDA program
-      uses: nvcc test.cu -o test.out
+      - name: Install CUDA
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget
+          wget https://developer.download.nvidia.com/compute/cuda/12.1.0/local_installers/cuda-repo-ubuntu2204-12-1-local_12.1.0-1_amd64.deb
+          sudo dpkg -i cuda-repo-ubuntu2204-12-1-local_12.1.0-1_amd64.deb
+          sudo apt-key add /var/cuda-repo-ubuntu2204-12-1-local/7fa2af80.pub
+          sudo apt-get update
+          sudo apt-get install -y cuda
 
-    - name: Run tests
-      uses: ./test.out
+      - name: Set up PATH for CUDA
+        run: echo "/usr/local/cuda/bin" >> $GITHUB_ENV
+
+      - name: Compile CUDA program
+        run: nvcc test.cu -o test.out
+
+      - name: Run tests
+        run: ./test.out
