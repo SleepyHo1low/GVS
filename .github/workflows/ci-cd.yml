@@ -28,7 +28,7 @@ jobs:
           sudo apt-get install -y cuda
 
       - name: Set up PATH for CUDA
-        run: echo "/usr/local/cuda/bin" >> $GITHUB_ENV
+        run: echo "/usr/local/cuda/bin" >> $GITHUB_PATH
 
       - name: Compile CUDA program
         run: nvcc test.cu -o test.out
