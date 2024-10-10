@@ -4,15 +4,24 @@ on:
   push:
     branches: 
       - test
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-  
+
+      - name: Install CUDA
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cuda
+
+      - name: Set up PATH for CUDA
+        run: echo "/usr/local/cuda/bin" >> $GITHUB_ENV
+
       - name: Compile CUDA program
         run: nvcc test.cu -o test.out
-  
+
       - name: Run tests
         run: ./test.out
