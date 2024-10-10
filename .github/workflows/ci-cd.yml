@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on: 
   push:
     branches: 
-      - test;
+      - test
 
 build:
   runs-on: ubuntu-latest;
