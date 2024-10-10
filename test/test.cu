@@ -15,7 +15,7 @@ void tests(int N, vector<string> &results){
   *answerGGPU = 0;
 
   float mean = 0.0;      
-  float stddev = 2.0;
+  float stddev = 1.5;
 
   random_device rd;
   mt19937 gen(rd()); 
