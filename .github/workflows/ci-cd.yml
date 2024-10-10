@@ -31,7 +31,7 @@ jobs:
         run: echo "/usr/local/cuda/bin" >> $GITHUB_PATH
 
       - name: Compile CUDA program
-        run: nvcc -I/src test/test.cu -o test.out
+        run: nvcc -I../src test/test.cu -o test.out
 
       - name: Run tests
         run: ./test.out
