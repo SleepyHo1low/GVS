@@ -34,7 +34,7 @@ jobs:
 
         run: 
           tree ./
-          nvcc -I ./src ./test/test.cu -o test.out
+          nvcc -I ./src ./test/test.cu ./src/imp.cu -o test.out
 
       - name: Run tests
         run: ./test.out

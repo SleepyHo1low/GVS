@@ -1,0 +1,1156 @@
+[33mcommit 9e253da44fb7679ab8bf94b85164874740be6f1f[m[33m ([m[1;36mHEAD -> [m[1;32mtest[m[33m, [m[1;31morigin/test[m[33m)[m
+Author: DenisZaborskih <dzabors@mail.ru>
+Date:   Sat Oct 12 09:56:26 2024 +0700
+
+    WIP
+    
+    adsasd asd sadsa dsa dsad sad sad
+
+[33mcommit 77f79727061151a4dd574d77e64d412c2f4b091e[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Fri Oct 11 10:43:05 2024 +0700
+
+    Update ci-cd.yml
+
+[33mcommit 7804504f0100dc15852ab8740bc777f4da1a0a46[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 14:44:34 2024 +0700
+
+    Update ci-cd.yml
+
+[33mcommit 5cdce34eda3ed9cf97f638268f874a49726df4c5[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 14:37:05 2024 +0700
+
+    Update ci-cd.yml
+
+[33mcommit 6934e4bc96525f0d37411e557ab69ea384575bc8[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 14:28:57 2024 +0700
+
+    Update ci-cd.yml
+
+[33mcommit ab0f55c9cac56bf32039775e199643390b854583[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 14:22:31 2024 +0700
+
+    Update ci-cd.yml
+
+[33mcommit 991837caa83ebbc4558005b2ac0a0af989b0ebec[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 14:08:25 2024 +0700
+
+    Update ci-cd.yml
+
+[33mcommit 744ab5bf7faca90c26cdb8c65d76494f385fbf24[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 13:59:35 2024 +0700
+
+    Update ci-cd.yml
+
+[33mcommit ad2d998567d4dc0229db47a95e859d2b3625edbf[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 13:46:58 2024 +0700
+
+    Update ci-cd.yml
+    
+    добавлены зависимости
+
+[33mcommit e941e18f2351dd2721eeca8dbcfc649bd1c590b3[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 13:43:46 2024 +0700
+
+    Update ci-cd.yml
+    
+    добавил установку cuda в github actions
+
+[33mcommit a444bc699591487fdda882e7d42a4bee3d287a7e[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 13:41:38 2024 +0700
+
+    Update ci-cd.yml
+
+[33mcommit 4b116be2744de6af28731b07f19208ac16d42f5f[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 13:16:53 2024 +0700
+
+    Update ci-cd.yml
+    
+    теперь вроде бы правильно
+
+[33mcommit 725aac4e730dd6d0c19ac3834dc2d29bcaaca075[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 13:14:53 2024 +0700
+
+    Update ci-cd.yml
+    
+    убрал лишнее
+
+[33mcommit 7e8fd7ed541ba2db9d071bf2a2316462be97229f[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 13:13:11 2024 +0700
+
+    Update test.cu CI/CD check
+
+[33mcommit bc5b32a8f3b11183b3ae9b5fa26a22a6c4583607[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 13:12:21 2024 +0700
+
+    Create ci-cd.yml на этой ветке теперь он тоже есть
+    
+    вроде с веткой dev не работает, возможно потому что на ней нет тестов
+
+[33mcommit 7c1481253ec59decd5029411fc0c45ddeebbb392[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 12:37:02 2024 +0700
+
+    Update test.cu
+    
+    жоско накоммитил почему то в actions нет моих коммитов с этой ветки
+
+[33mcommit a295e9bdcba71c0bd5a995b8424c40f4b7103014[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 12:35:12 2024 +0700
+
+    Update test.cu CI/CD check
+    
+    опять
+
+[33mcommit c0e3b0569e0b505118cbda1b3ccae1169d53ac9a[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Thu Oct 10 12:29:34 2024 +0700
+
+    Update test.cu CI/CD check
+    
+    Изменил параметры нормального распределения, в основном просто чтобы осуществить коммит
+
+[33mcommit e1d5a17bb1daeb8fe8a67f0311ab72c35f4e71e0[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Oct 6 10:50:12 2024 +0700
+
+    Update test.cu пытаюсь сделать актуальным
+
+[33mcommit 0c3fc78b14398e0cc26bfea211c24a969e3529b8[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Oct 6 10:40:39 2024 +0700
+
+    Update main.cu тоже обновил
+
+[33mcommit 39b23b39c78e965fcc1bf5f74b5393cfe73a4e3b[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Oct 6 10:37:34 2024 +0700
+
+    Update imp.cuh в соответствии с актуальным вариантом
+
+[33mcommit 149537b5ba5af6f2325ff3108434f28245374143[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Oct 6 10:37:09 2024 +0700
+
+    Update imp.cu в соответствии с актуальным вариантом
+
+[33mcommit 14e7f3e11afcbb84b2134906ec8a8f3c5f493bb4[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 16:40:18 2024 +0700
+
+    Update test.cu
+
+[33mcommit 3e48c9a86cf0c14272bfc8eedf8c70a3bae85898[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 16:38:07 2024 +0700
+
+    Update test.cu
+
+[33mcommit 82fadda7bb2d3de4765ec3a3073fd16885795c9e[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 16:35:55 2024 +0700
+
+    Update test.cu
+
+[33mcommit 057d6b38b049018b99bafae49209c5aa954e707b[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 16:34:54 2024 +0700
+
+    Update test.cu
+    
+    проверяем что комментить
+
+[33mcommit 7a5916438f1ec1fd3189eceaa36b47fa049bbba5[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 16:23:54 2024 +0700
+
+    Update test.cu
+    
+    вернул нормальное распределение
+
+[33mcommit 74e74a040359fbc447dcf8b02cfe2734bf74d4a0[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 16:22:20 2024 +0700
+
+    Update test.cu
+
+[33mcommit c0c12c89b3191bc6ed62e720bd2491105a5741a4[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 16:20:16 2024 +0700
+
+    Update test.cu
+    
+    закомментил освобождение ресурсов, может быть зря
+
+[33mcommit 426b418bb618cfaadc60a0fde48f6618fe3cd708[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 16:18:49 2024 +0700
+
+    Update test.cu
+    
+    убрал нормальное распределение
+
+[33mcommit 6558b8f033509ca37c40f35a09182cefaa2c3491[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 16:15:55 2024 +0700
+
+    Update test.cu
+    
+    лезу не в свою область знаний
+
+[33mcommit f2ece52cdb39952968837a0073e942b2fbd18613[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 16:13:05 2024 +0700
+
+    Update test.cu
+    
+    убрал лишнюю букву с
+
+[33mcommit 6785d0147cf2ac7c9cf7b3da792fc32edd2a8027[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 16:12:29 2024 +0700
+
+    Update test.cu
+    
+    потерял букву с
+
+[33mcommit bfa5b09ef3e042273c364d564a45ad7278d9bd71[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 16:11:40 2024 +0700
+
+    Update test.cu на веторах
+    
+    попытка использовать вектор
+
+[33mcommit 49e6a894ebc2ef429370567d3e309b905e855d0f[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 13:26:43 2024 +0700
+
+    Update test.cu
+
+[33mcommit 09e0278c0ded51179478652fc268bb1cead71860[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 13:07:52 2024 +0700
+
+    Update test.cu
+
+[33mcommit c97c08abf2b11ff67a69da1042a7420f91a428e6[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 13:03:39 2024 +0700
+
+    Update test.cu
+
+[33mcommit 320215c7959cedd008a67f74e05abbbcd229a366[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 30 12:53:35 2024 +0700
+
+    Update test.cu NR
+    
+    Сделал нормальное распределение
+
+[33mcommit 2f9ad1d6e9fdd66760bbce4510ffea4289b0fc8f[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 30 12:43:43 2024 +0700
+
+    Update test.cu
+
+[33mcommit 37f4f297029bce312525a47bf74326f21ab18a49[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 30 12:42:31 2024 +0700
+
+    Update test.cu
+
+[33mcommit efd21eb54c299171f74f6119289c3eeedd918e73[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 30 12:36:55 2024 +0700
+
+    Update test.cu
+
+[33mcommit 9cb14bda4f86b4167c8878edc2f4eafcc1a9c858[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 30 12:31:43 2024 +0700
+
+    Update test.cu
+
+[33mcommit 5751c390f77a7a4477eff18f9922847488bd4837[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 30 12:29:36 2024 +0700
+
+    Update test.cu
+
+[33mcommit 488474b8361dc2ceb46fdda23c336a4e166b8b99[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 30 12:29:13 2024 +0700
+
+    Update test.cu
+
+[33mcommit accf2c6b2744d44b91444bf8d5eacdb3ce35e966[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 30 12:28:05 2024 +0700
+
+    Update test.cu
+
+[33mcommit f06ba42f891c574922f44b1e814cfdb88e3b0ecc[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 30 12:26:45 2024 +0700
+
+    Update test.cu
+
+[33mcommit 5afac8de99f82772d8603f7404e7c1ce89f92ce5[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 30 12:26:07 2024 +0700
+
+    Update test.cu
+
+[33mcommit 5ed038e9dd0915f71b00895bc90a37156851005e[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 30 12:19:44 2024 +0700
+
+    Update test.cu
+
+[33mcommit 894240d280ef10a1bca561b4ccfcb7b559864afe[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 30 12:17:02 2024 +0700
+
+    Update test.cu
+
+[33mcommit b7e5b57c9b0dd666b304a2d91d5995418885cc46[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 21:32:52 2024 +0700
+
+    Update test.cu
+    
+    теперь тесты будут работать очень долго
+
+[33mcommit adaa642ae67cf5e6a57136093e7956bc3de41278[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 21:27:02 2024 +0700
+
+    Изменил цикл в main в test.cu
+    
+    чтобы было всегда 100 итераций
+
+[33mcommit af8b53d2c677e03172329b3292f5a8697312e571[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 21:21:46 2024 +0700
+
+    убрал gtest из cmakelists
+    
+    он мне надоел
+
+[33mcommit 22f7ed3c5b999d1014020357050aee8aad041e53[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 21:17:01 2024 +0700
+
+    Update CMakeLists.txt
+
+[33mcommit 43c3f22d7a9cf50430670415c5efbb02a2199b43[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 21:15:50 2024 +0700
+
+    Update CMakeLists.txt
+
+[33mcommit cc437139c1c0cad4fd6aa16da8070964f6787ac1[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 21:14:17 2024 +0700
+
+    Update CMakeLists.txt
+    
+    сюда добавил путь
+
+[33mcommit 91341b0547fd24e86edeebf439763abed9d93db1[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 21:13:22 2024 +0700
+
+    вернул путь
+    
+    нет пути все равно
+
+[33mcommit 2158c50f59e679dd803d3a5b30c0d95c81e36604[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 21:11:16 2024 +0700
+
+    Update test.cu
+
+[33mcommit 35432792ae7ce9c6132139b8f7ddd7455ec38895[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 21:09:42 2024 +0700
+
+    Update test.cu
+
+[33mcommit fb1d99b77efb01d8435a641ad44b59ce55e2b74a[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 21:08:30 2024 +0700
+
+    Поменял путь в test.cu
+    
+    проверка
+
+[33mcommit 963b211f73627a8e5aa1b755b8d50100ffc77e58[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 21:07:00 2024 +0700
+
+    добавил data.cpp
+    
+    чтобы пулл реквест потом
+
+[33mcommit 2d53d45dabb23ad5389cda0b350a190050347c34[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 21:05:29 2024 +0700
+
+    Скопировал main
+    
+    скопировал main.cu из dev чтобы подготовить pull request
+
+[33mcommit b0179894894bcc235317a897cd15f33aa3644191[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 21:01:29 2024 +0700
+
+    вернул версию до gtest
+    
+    вернул как было до гтеста
+
+[33mcommit 0f7c472e80df840649081928048eac8580685341[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 20:32:37 2024 +0700
+
+    Update test.cu
+
+[33mcommit 1d8814d3fcbf5ad10a291eee4479edc27ae6a677[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 20:31:11 2024 +0700
+
+    Create test.cuh
+
+[33mcommit f9a3c39567f29ab555ea96bb9e3436791e63c8ae[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 20:23:47 2024 +0700
+
+    Update CMakeLists.txt
+
+[33mcommit 4a8293ebec98ab3f048312fb1fbc43b01c6a7817[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 20:22:36 2024 +0700
+
+    Update CMakeLists.txt
+    
+    в очередной раз исправляю gtest
+
+[33mcommit 5b02b5a11406af8c9025ff3d9fed0424d1714bc4[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 20:17:33 2024 +0700
+
+    Update CMakeLists.txt
+
+[33mcommit 8b061ba789be26517d66c65b27b361a168d8c59d[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 20:16:46 2024 +0700
+
+    Update CMakeLists.txt
+
+[33mcommit 499d0f91367b906100ae6b1d836d0e10ffb632d7[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 20:16:02 2024 +0700
+
+    Update CMakeLists.txt
+
+[33mcommit 15a6be35e9bf1b48cb16d2a3f535d4e6670faf0b[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 20:15:12 2024 +0700
+
+    Update CMakeLists.txt
+    
+    поменял некоторые строчки местами
+
+[33mcommit 3fc223a04b9e5a1c28233f7fa2bea325a183a48e[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 20:07:56 2024 +0700
+
+    Update CMakeLists.txt
+    
+    поменял test.cpp на test.cu
+
+[33mcommit aaebfc890d8d3c90e3aaa039f478517cb0fff60b[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 20:06:39 2024 +0700
+
+    Update test.cu
+
+[33mcommit aa796d3d170facb3acc5bb0ffbbb441d21c962d3[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 20:06:14 2024 +0700
+
+    Create test.cu
+    
+    готовимся к пулл реквесту
+
+[33mcommit acfd40a63a2d9fb82069f80fcf314512df3052e4[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 19:27:54 2024 +0700
+
+    Delete test
+    
+    это не папка
+
+[33mcommit 792157a53cdb7017c0258b23b3be182c7e5c233e[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 19:27:25 2024 +0700
+
+    Create test
+    
+    создал папку(надеюсь)
+
+[33mcommit 46340f8f1971a96408cde56e548917adb8823fbf[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 19:24:52 2024 +0700
+
+    Update CMakeLists.txt
+    
+    пытаюсь в си мейк
+
+[33mcommit f669a08e43d76c20da095eb83d397ec5380d3183[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 19:22:32 2024 +0700
+
+    Update main.cu
+    
+    подключил гугл тест
+
+[33mcommit 416430d78864edff794ac4fd8bdae9b68120e22c[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 17:46:04 2024 +0700
+
+    Update main.cu
+
+[33mcommit 8f9d7a96ee2edc6113c01faf8e3ee2731a05a5e7[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 17:41:45 2024 +0700
+
+    Update main.cu
+
+[33mcommit 074d24d1127cd00a7e74bcf1f5a39d638724275a[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 17:40:44 2024 +0700
+
+    Update main.cu
+
+[33mcommit 0cae0ec8c679e2d09fdc281f9b026a68fc00c1cc[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 17:40:07 2024 +0700
+
+    Update main.cu
+
+[33mcommit 6c0ffef03f1e95aec262e7a7324dcc27c58dd3c5[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 17:37:19 2024 +0700
+
+    Update main.cu
+    
+    убрал подсчет времени он тут не нужен
+
+[33mcommit 0463ff378dddfa72d4dde68a817b0e1faf775a37[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 17:33:19 2024 +0700
+
+    Update main.cu
+    
+    добавил пространство имен, может поможет
+
+[33mcommit 6b0a32472b3634b077ee727b6a5be6516682ceee[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 17:32:12 2024 +0700
+
+    Update main.cu
+    
+    у меня ничего не работает
+
+[33mcommit 1af850c84ec4f57063ce0312f201311a0134442f[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 17:28:39 2024 +0700
+
+    Delete test.cu
+    
+    перенесен в main.cu
+
+[33mcommit e7c0f490c9118d348bc82fc20e843892265a8281[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 17:28:15 2024 +0700
+
+    Update main.cu
+    
+    так как ветка тестовая, то пусть здесь и main.cu будет тестовый, надо для тестов в коллабе
+
+[33mcommit 94420d24e729958f31f31cdb516b469b4b4d7efe[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 17:26:21 2024 +0700
+
+    Delete src/data.cpp
+    
+    на тестовой ветке этот файл не нужен (во всяком случае мне хочется в это верить)
+
+[33mcommit 0bac5b010f881ab951aa6664d8f9442477b23202[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 17:17:15 2024 +0700
+
+    Create test.cu
+    
+    снова создал файл так как потерял его
+
+[33mcommit 6bee467a73c30f0f5908eeb8dd04ae392e65c8f3[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 17:01:20 2024 +0700
+
+    Delete test.cu из ветки dev
+    
+    случайно за пуллреквестил себе в штаны
+
+[33mcommit 9496368124619704467342d52a85068de60b9b7a[m
+Merge: f082cb0 b48ea3c
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 16:57:38 2024 +0700
+
+    Merge pull request #1 from SleepyHo1low/test
+    
+    Test
+
+[33mcommit b48ea3c31cd75e17d64c674d1bb71fdd3c30615c[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 16:46:05 2024 +0700
+
+    Update test.cu
+    
+    tests done but untested
+
+[33mcommit ec6a10bc9fdfa9354b809894928f868b911953fd[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Sun Sep 29 16:25:34 2024 +0700
+
+    Create test.cu
+
+[33mcommit f082cb0e12e5b7662749252540106f6a8d9cc23a[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 17:43:58 2024 +0700
+
+    sdf
+
+[33mcommit 20217e2487ecdd2ddc09461cfff0a3a6cf55bed2[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 17:39:04 2024 +0700
+
+    rem kom
+
+[33mcommit c90f2c495eda24394bbffabbc5d5f08b45888968[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 17:37:49 2024 +0700
+
+    make adta
+
+[33mcommit b291a5541124cba6eefa52aef49ff45880c9be94[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 17:36:25 2024 +0700
+
+    gen data
+
+[33mcommit 92704ba202af1264033258a634d3494470572497[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 17:35:43 2024 +0700
+
+    alloc
+
+[33mcommit d5dde70662ea50d00c6b133c2be70bd34b430e60[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 17:32:14 2024 +0700
+
+    male data more faster
+
+[33mcommit b9b80df5ae1073e1b566e06a47ff3afb5c6088a9[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 12:45:04 2024 +0700
+
+    remove delete
+
+[33mcommit 2239065048b4cd781c8ebde5205a0c04900d2b7a[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 12:35:09 2024 +0700
+
+    data fix path
+
+[33mcommit 06ec248b1218305e73162dcb8b35fd6c3b72d3ca[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 12:13:39 2024 +0700
+
+    сс
+
+[33mcommit 709f43f6a5a27ddf9eb2d1da95867918191f3615[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 00:36:48 2024 +0700
+
+    \n
+
+[33mcommit e6398359914e81fd4986d75c677270c32b8574ea[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 00:34:37 2024 +0700
+
+    убрал функцию fill arrays
+
+[33mcommit db85660ea570f5d688d9dfafc12f211f13d1cc61[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 00:33:03 2024 +0700
+
+    меняю язык на англ
+
+[33mcommit 573b149b9212dc38e9cb8c6150488e51d9e8aadd[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 00:29:26 2024 +0700
+
+    laguage
+
+[33mcommit af9ceb64eca6653962c0b512bff4193dae7832ea[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 00:29:04 2024 +0700
+
+    data
+
+[33mcommit 50fd38f652f0084a0bb7fe533c2ee84d9ab6be03[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 00:23:31 2024 +0700
+
+    data
+
+[33mcommit 4eacb9a915c570b81c9691150697ffac3c571553[m
+Author: Professional <Professional@USER-PC>
+Date:   Tue Sep 24 00:20:09 2024 +0700
+
+    cvb
+
+[33mcommit c1effcfc80a25f52fe25ecd84763069c59f34f6e[m
+Author: Бажен <95105368+Tam15937@users.noreply.github.com>
+Date:   Mon Sep 23 23:52:39 2024 +0700
+
+    data
+
+[33mcommit f14d6436c24a6b379464f0105c90631e283f6ce0[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 17:22:31 2024 +0700
+
+    Update main.cu
+
+[33mcommit 11f077ef7ee67ed249eb628df6e82abe6e9c57a5[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 17:21:21 2024 +0700
+
+    Update main.cu
+
+[33mcommit fad2595e09a9b64595e411421a3ba9f569d6ffc2[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 17:18:53 2024 +0700
+
+    Update main.cu
+
+[33mcommit 82ff2fb79c66608290a666082631c03731680ccd[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 17:18:25 2024 +0700
+
+    Update main.cu
+
+[33mcommit 742ca1719e2d85b4d62d6cd7696e0acaf74baad6[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 17:16:56 2024 +0700
+
+    Update main.cu
+
+[33mcommit cff200d13787e9c10626b6fb390c733120bedd50[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 17:16:46 2024 +0700
+
+    Update main.cu
+
+[33mcommit 3138f6d2fc5410077ba2cb8d3b03eb8e83aea789[m
+Author: Бажен <95105368+Tam15937@users.noreply.github.com>
+Date:   Mon Sep 23 13:09:10 2024 +0300
+
+    unsigned long long int 500 000 000 000
+
+[33mcommit acc5187bd8ef7bda4e2dc62d4a80aa57434a074d[m
+Author: Бажен <95105368+Tam15937@users.noreply.github.com>
+Date:   Mon Sep 23 13:08:36 2024 +0300
+
+    unsigned long long int
+
+[33mcommit 2c550add0a28bcfde7872c08d4614b2b2523603a[m
+Author: Бажен <95105368+Tam15937@users.noreply.github.com>
+Date:   Mon Sep 23 13:00:55 2024 +0300
+
+    50 000 000 000 test
+
+[33mcommit 2231ce98d3b25d5d39ebda503ab37f6850408ff2[m
+Author: Бажен <95105368+Tam15937@users.noreply.github.com>
+Date:   Mon Sep 23 12:57:34 2024 +0300
+
+    5 000 000 000 test
+
+[33mcommit 9ee5508c5dcb3d00777a9ed6978214030a31e54d[m
+Author: Бажен <95105368+Tam15937@users.noreply.github.com>
+Date:   Mon Sep 23 12:54:18 2024 +0300
+
+    long int N
+
+[33mcommit 29a9443adfe20b828d2d2e65400b8b7ef49086c2[m
+Author: Бажен <95105368+Tam15937@users.noreply.github.com>
+Date:   Mon Sep 23 12:51:49 2024 +0300
+
+    4
+
+[33mcommit ec9e0535ed50580a02c28a384e2dfb02e78d963e[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 16:27:19 2024 +0700
+
+    Update main.cu
+
+[33mcommit 15b054b2bf4c9fa42b709589032e11c830b43d31[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 16:24:17 2024 +0700
+
+    Update main.cu
+
+[33mcommit 7a84f7faf76f34bd2048e5e294f02d031561417c[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 16:17:55 2024 +0700
+
+    Update main.cu
+
+[33mcommit b92fb56335c2cadac9b8263c377c738eb88227b3[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 16:17:16 2024 +0700
+
+    Update imp.cu
+
+[33mcommit 92d0db3c9275f633077692bf513ed2c5d1f10825[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 16:14:17 2024 +0700
+
+    Update main.cu
+
+[33mcommit 3ea153cd06b506a5c5ac98eb94094938e8d0d8ce[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 16:13:13 2024 +0700
+
+    Update imp.cu
+
+[33mcommit 17e266cb8a107dad83791b5bcb75b1f2ba8dc685[m
+Author: Бажен <95105368+Tam15937@users.noreply.github.com>
+Date:   Mon Sep 23 10:57:43 2024 +0300
+
+    Update README.md
+
+[33mcommit bec58020a142a0e68902d50b192b7b3a2fa2580f[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:33:07 2024 +0700
+
+    Update main.cu
+
+[33mcommit 8a9bd72a40ead1fdb650a91d7a68f91e67223d34[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:32:39 2024 +0700
+
+    Update main.cu
+
+[33mcommit 794486071f26b8ea99dcc1a63780cb529bba57f6[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:32:02 2024 +0700
+
+    Update main.cu
+
+[33mcommit cda0e09d5a4958c1be89f746949dea176016d54e[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:30:51 2024 +0700
+
+    Update main.cu
+
+[33mcommit dd6191f973209df89e4235cf94071a4e4f3b6975[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:30:16 2024 +0700
+
+    Update main.cu
+
+[33mcommit f8b03cf7d029bb49380aa2427dfb75c85e48b40e[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:29:35 2024 +0700
+
+    Update main.cu
+
+[33mcommit 9379a94a1cb3ff71da9cf618424f7979d29a0257[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:28:48 2024 +0700
+
+    Update main.cu
+
+[33mcommit a8bd66ce644d518303288b4af71124c39bc9c6e8[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:27:49 2024 +0700
+
+    Update main.cu
+
+[33mcommit 872b380860c1a2eac50d3466dcc8c05b2557bc67[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:27:09 2024 +0700
+
+    Update main.cu
+
+[33mcommit 43ee233568437a3a239a31a4d02adee6bd527abb[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:25:18 2024 +0700
+
+    Update main.cu
+
+[33mcommit a3e174d705e5832ddc2b314cf5323db9ffeb6f06[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:23:44 2024 +0700
+
+    Update main.cu
+
+[33mcommit 09db5734e07a209c7ff5469413214c6b38a0df6d[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:23:31 2024 +0700
+
+    Update main.cu
+
+[33mcommit 041a6fdfa806a677ccfa2a19a341e944e509d523[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:22:47 2024 +0700
+
+    Update main.cu
+
+[33mcommit 59d1cbce44882bcc2573382911629f2c0a2cfed7[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:22:05 2024 +0700
+
+    Update main.cu
+
+[33mcommit 94bd2dfacf6c9e49c2184febe758d7005e650c8b[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:17:45 2024 +0700
+
+    Update main.cu
+
+[33mcommit 1ae6d54836c37cc2668bd9b1f7e753add24ea562[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:16:28 2024 +0700
+
+    Update main.cu
+
+[33mcommit e1c7e1fb8c8c9a78c57f9a1be727d32bc816087d[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:13:44 2024 +0700
+
+    Update main.cu
+
+[33mcommit 518eadc9a00afda2b583238aa5a6849bec92885b[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:12:46 2024 +0700
+
+    Update main.cu
+
+[33mcommit b7c86aeee381ca112c54d407109aec6d4b26f861[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:10:09 2024 +0700
+
+    Update main.cu
+
+[33mcommit 652f0e0ad6d0581956563f3f2158369ab991e55e[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:07:38 2024 +0700
+
+    Update main.cu
+
+[33mcommit 21731008d925ff2f31453755e078c40eff8585d9[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 13:04:34 2024 +0700
+
+    Update main.cu
+
+[33mcommit 65ad8965241446de804e6973c7ad18c6648f5624[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 12:50:35 2024 +0700
+
+    Update README.md
+
+[33mcommit 81503d4ee2d7d0ebc69220d18560aee24dc1fda5[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 12:47:42 2024 +0700
+
+    Delete src/test.txt
+
+[33mcommit 83113fab8b1fb62b4531dd9bade7d089d3b98033[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 12:35:01 2024 +0700
+
+    Update CMakeLists.txt
+
+[33mcommit c4d7ddd6e74088a286efcf4211aa9f619cc06182[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 12:33:48 2024 +0700
+
+    Update CMakeLists.txt
+
+[33mcommit 548ea063cb4362137024a85c6a301649c35c015e[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 12:33:06 2024 +0700
+
+    Update CMakeLists.txt
+
+[33mcommit ffee6d81632f9c6db9b81474a15ca01c8a904648[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 12:32:22 2024 +0700
+
+    Update CMakeLists.txt
+
+[33mcommit 02d05fcfa6c3099dd9cf9c7cb7775e461226d680[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 12:30:45 2024 +0700
+
+    Update CMakeLists.txt
+
+[33mcommit 9c71f643282e645416a3ecd5b9ba21f0e47efccc[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 12:30:19 2024 +0700
+
+    Update CMakeLists.txt
+
+[33mcommit f44881705806eb4d85c6fdbb51cad53a34e4cb4f[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 12:26:26 2024 +0700
+
+    Update CMakeLists.txt
+
+[33mcommit c25ab57496a11603cd94fe0ac6cc6e153f4f1453[m
+Author: SleepyHo1low <135194204+SleepyHo1low@users.noreply.github.com>
+Date:   Mon Sep 23 12:00:16 2024 +0700
+
+    Update README.md
+
+[33mcommit 5330739f48c10e4d129a49d21e3743713c473f4e[m
+Author: SleepyHo1low <135194204+SleepyHo1low@users.noreply.github.com>
+Date:   Mon Sep 23 11:57:40 2024 +0700
+
+    Update README.md
+
+[33mcommit 7d599c995017d3cb85a4753aabe38c9099134062[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 09:27:34 2024 +0700
+
+    Create CMakeLists.txt
+    
+    Я не знаю как писать CMake
+
+[33mcommit 104b5ac350eb85111c2933f66d7024b7410d599f[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 09:10:51 2024 +0700
+
+    Основные файлики
+    
+    imp.cuh - библиотека с декларированными функциями (CUDA header)
+    imp.cu - имплементация декларированных в imp.cuh функций (CUDA)
+    main.cu - программа где вызываются функции
+
+[33mcommit a63afd635860f08f1fcb241a7d6496a0504d540b[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 09:08:14 2024 +0700
+
+    Create test.txt
+
+[33mcommit c370252d38cbe2ed52808c7092a9a81542bda395[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 09:07:55 2024 +0700
+
+    Delete src
+
+[33mcommit 7198862d28c97e1bcd8a6c20427918a333394236[m
+Author: AmbientNomadA12 <119795304+AmbientNomadA12@users.noreply.github.com>
+Date:   Mon Sep 23 09:05:39 2024 +0700
+
+    Create src
+
+[33mcommit 691d8d5e1291c4b5be8babce83c3dec3088fb533[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 16 13:32:34 2024 +0700
+
+    Rename photo_2024-09-12_11-18-30.jpg to Вопросы.jpg
+
+[33mcommit d94cf75ae5bc66fcdaf1525e121c3c4064f5ed8e[m
+Author: SleepyHo1low <135194204+SleepyHo1low@users.noreply.github.com>
+Date:   Mon Sep 16 13:32:10 2024 +0700
+
+    Add files via upload
+
+[33mcommit d785dc2c3ef56799d236293bcc0fb7887ef850c7[m
+Author: DanBur1 <119559983+DanBur1@users.noreply.github.com>
+Date:   Mon Sep 16 13:29:48 2024 +0700
+
+    Update README.md
+    
+    Donil Commit
+
+[33mcommit 853c50fd22f37fded18bde1cd99e36f2a3dd7b06[m
+Author: DanBur1 <119559983+DanBur1@users.noreply.github.com>
+Date:   Mon Sep 16 13:29:29 2024 +0700
+
+    Update README.md
+    
+    Donil Commit
+
+[33mcommit cf76bbea8437d23e43887e16d860febf597e08cf[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 16 13:27:01 2024 +0700
+
+    Update README.md
+
+[33mcommit 36613234cdc10aec5f459029385d1e511673310d[m
+Author: DenisZaborskih <119655908+DenisZaborskih@users.noreply.github.com>
+Date:   Mon Sep 16 13:26:44 2024 +0700
+
+    Update README.md
+
+[33mcommit ef2fa05a7ff9826869d3401c97727c08d5986342[m
+Author: Бажен <95105368+Tam15937@users.noreply.github.com>
+Date:   Mon Sep 16 09:17:43 2024 +0300
+
+    Update README.md
+
+[33mcommit 28c2747201d96b1f09f23501e122dc7b7f0a1cc4[m
+Author: SleepyHo1low <135194204+SleepyHo1low@users.noreply.github.com>
+Date:   Mon Sep 16 13:12:44 2024 +0700
+
+    Update README.md
+
+[33mcommit 28dca01bed7faa38d6ba03d7ed8c629d1ef137d1[m
+Author: SleepyHo1low <135194204+SleepyHo1low@users.noreply.github.com>
+Date:   Mon Sep 16 13:09:34 2024 +0700
+
+    Update README.md
+
+[33mcommit d78ed0cf0eea0e4dbfbbcdc48c5b4a679da93e78[m
+Author: SleepyHo1low <135194204+SleepyHo1low@users.noreply.github.com>
+Date:   Mon Sep 16 12:23:03 2024 +0700
+
+    Update README.md
+
+[33mcommit a1deb39d8732c1339af215b834bdc45eecd71ee4[m
+Author: SleepyHo1low <135194204+SleepyHo1low@users.noreply.github.com>
+Date:   Mon Sep 16 12:20:57 2024 +0700
+
+    Initial commit

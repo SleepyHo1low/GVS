@@ -6,7 +6,8 @@
 
 using namespace std;
 
-void tests(int N, vector<string> &results){
+void tests(int N, vector<string> &results)
+{
   float *A = new float[N];
   float *B = new float[N];
   float *answerGPU = new float();
@@ -14,16 +15,17 @@ void tests(int N, vector<string> &results){
   *answerGPU = 0;
   *answerGGPU = 0;
 
-  float mean = 0.0;      
+  float mean = 0.0;
   float stddev = 2.0;
 
   random_device rd;
-  mt19937 gen(rd()); 
+  mt19937 gen(rd());
   normal_distribution<double> dist(mean, stddev);
 
-  for (int i = 0; i < N; ++i) {
-      A[i] = dist(gen);
-      B[i] = dist(gen);
+  for (int i = 0; i < N; ++i)
+  {
+    A[i] = dist(gen);
+    B[i] = dist(gen);
   }
 
   /*for (int i = 0; i < N; ++i) {
@@ -40,47 +42,51 @@ void tests(int N, vector<string> &results){
   cudaMemcpy(cudaA, A, N * sizeof(float), cudaMemcpyHostToDevice);
   cudaMemcpy(cudaB, B, N * sizeof(float), cudaMemcpyHostToDevice);
 
-  const int block_size = 256;
-   int number_of_blocks = (N + THREADS_PER_BLOCK - 1) / THREADS_PER_BLOCK;
+  int number_of_blocks = (N + THREADS_PER_BLOCK - 1) / THREADS_PER_BLOCK;
 
-  GPUimplementation << < number_of_blocks, THREADS_PER_BLOCK, THREADS_PER_BLOCK * sizeof(float) >> > (cudaA, cudaB, answerGPU, N);
+  GPUimplementation<<<number_of_blocks, THREADS_PER_BLOCK, THREADS_PER_BLOCK * sizeof(float)>>>(cudaA, cudaB, answerGPU, N);
   cudaDeviceSynchronize();
 
   cudaMemcpy(answerGGPU, answerGPU, sizeof(float), cudaMemcpyDeviceToHost);
-  
+
   string result = "CPU: " + to_string(answerCPU) + " GPU: " + to_string(*answerGGPU);
-  if (abs(answerCPU - *answerGGPU) < 1e-2) {
-      result += " | Результаты совпадают!";
-  } else {
-      result += " | Результаты не совпадают!";
+  if (abs(answerCPU - *answerGGPU) < 1e-2)
+  {
+    result += " | Результаты совпадают!";
+  }
+  else
+  {
+    result += " | Результаты не совпадают!";
   }
   results.push_back(result);
 
   // Освобождение ресурсов
   delete[] A;
   delete[] B;
-/*
-  delete answerGPU;
-  delete answerGGPU;
+  /*
+    delete answerGPU;
+    delete answerGGPU;
 
-  cudaFree(cudaA);
-  cudaFree(cudaB);
-*/
+    cudaFree(cudaA);
+    cudaFree(cudaB);
+  */
   cudaFree(answerGPU);
 }
 
-int main(){
+int main()
+{
   srand(time(0));
   vector<string> result;
 
-  for(int i = 0; i < 10; i++){
-    cout << "Test " << i << ":" << "N : "  << (1 + pow(10,i)) << endl;
-    tests(1 + pow(10,i), result);
+  for (int i = 0; i < 10; i++)
+  {
+    cout << "Test " << i << ":" << "N : " << (1 + pow(10, i)) << endl;
+    tests(1 + pow(10, i), result);
   }
 
   cout << "\nРезультаты всех тестов:\n";
-  for (const auto& res : result) {
-      cout << res << endl;
+  for (const auto &res : result)
+  {
+    cout << res << endl;
   }
-  
 }
